@@ -1,0 +1,72 @@
+
+.root{
+    --primary: #fff;
+}
+
+
+.btn{
+    padding: 12px 26px;    
+    border: white solid 1px;
+    border-radius: 5px;  
+    outline: none;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.btn-large {    
+    height: 80px;
+    width: 200px; 
+    font-size: 20px;
+}
+
+.btn-middle {    
+    height: 60px;
+    width: 150px; 
+    font-size: 15px;   
+}
+
+.btn-small {    
+    height: 40px;
+    width: 120px;   
+    font-size: 12px;
+}
+
+.btn-transparent{
+    background-color:  transparent;
+    color: white;
+}
+.btn-transparent:disabled{
+    background-color: #202C3D;
+    color: grey;
+}
+
+.btn-transparent:hover{
+    background-color: rgba(255, 255, 255, .9);
+    transition: all .5s ease-out;
+    color: black;
+}
+
+
+.btn-transparent:disabled:hover{
+    background-color: rgba(100, 100, 100, .9);
+    transition: all .1s ease-out;
+    color: rgba(100, 100, 100, .9);
+}
+
+
+
+
+
+.btn-white{
+    background-color:  white;
+    color: rgb(0, 0, 0);
+
+}
+
+.btn-white:hover{
+    background-color: rgba(0, 0, 0, .2);
+    transition: all .5s ease-out;
+    color: #fff;
+}
+

@@ -1,0 +1,12 @@
+.contentInfoDiv{
+    margin: auto;
+    width: 90%;
+    margin-top:  10px;
+    text-align: justify;     
+    top: 5rem;  
+    left: 5rem;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }

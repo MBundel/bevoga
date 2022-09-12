@@ -1,0 +1,121 @@
+.blog-container{
+    display: flex;
+    height: auto;
+    min-height: 200px; 
+    width: 60%;
+    background-color: rgba(32, 44, 61, .7);    
+    border-radius: 30px;
+    margin: auto  auto 3rem ;
+}
+
+
+.blog-container:hover{
+    transform: scale(1.05);
+    background-color: rgba(32, 44, 61, .9); 
+    transition: linear .5s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: 99;
+}
+.blog-container:hover>.blog-icon{
+    color: rgba(32, 44, 61, 1); 
+    background-color: rgba(255, 255, 255, .9);
+    transition: linear .5s;
+}
+.blog-container:hover>.flex-container>.blog-text{
+    color: rgba(32, 44, 61, .9); 
+    background-color: rgba(255, 255, 255, .9);
+    transition: linear .5s;
+}
+.blog-container:hover>.flex-container>.blog-header{
+    color: rgba(32, 44, 61, .9); 
+    background-color: rgba(255, 255, 255, .9);
+    transition: linear .5s;
+}
+
+
+
+
+.blog-icon{
+   background-color: rgba(32, 44, 61, .7);  
+    display: flex;
+    width:  200px;
+    height: 200px;
+    color: white;   
+    border-radius: 30px;
+    box-shadow: inset 0 0 7px #000000;
+}
+
+.blog-header{
+    background-color: rgba(32, 44, 61, .7);  
+    display: flex;
+    padding: 10px;    
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: auto;    
+    width: 100%;
+    height: 80px;
+    color: white;   
+    border-radius: 30px;
+    box-shadow: inset 0 0 7px #000000;
+    font-size: 2rem;
+}
+
+.blog-text{
+   background-color: rgba(32, 44, 61, .7);  
+    display: flex;
+    padding: 10px;    
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    overflow: hidden;
+    margin-left: 25px;
+    margin-right: 25px;    
+    width: 100%;
+    height: 80px;
+    color: white;   
+    border-radius: 30px;
+    box-shadow: inset 0 0 7px #000000;
+}
+
+.flex-container{
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+@media (max-width: 700px) {
+
+
+    .blog-container{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 200px; 
+        width: 90%;
+        background-color: rgba(32, 44, 61, .7);    
+        border-radius: 30px;
+        margin: auto;
+    }
+
+    .blog-icon{
+       margin: auto;
+     }
+     .blog-header{  
+        font-size: 1.3rem;
+        margin: auto;   
+        
+    }
+    
+    .blog-text{       
+        margin:auto; 
+    }
+    
+    .flex-container{
+        margin: auto;
+        min-height: 200px;
+    }
+}
+

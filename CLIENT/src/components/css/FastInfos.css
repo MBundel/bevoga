@@ -1,0 +1,158 @@
+.faInfo-content-container{
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0, 0, 0, .2);
+       
+}
+
+.test{
+    height: 2000px;
+}
+
+.faInfo-nav{
+ position: sticky;
+ top: 80px;
+ width: 100%;
+ height: auto;
+ background-color: #202c3d;
+ padding: 20px;
+ justify-content: space-around;
+ display: flex;
+}
+
+
+
+.flexbox{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+
+    
+}
+.flexbox >div{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+    
+}
+
+.faInfo-Info-icon{
+    position: relative;
+    display: flex;
+    left: 91.8%;
+    top: 90%;
+}
+
+
+.faInfo-header-box{
+    
+    width: 600px;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 15px;
+    box-shadow:  10px 10px 10px 2px  rgba(0, 0, 0, .2)
+    
+    
+}
+
+
+.faInfo-info-box{
+      
+    width: auto;
+    margin-left: auto;   
+    height: fit-content;
+    border-radius: 20px;
+    align-self: flex-end;
+    justify-self: flex-end ;  
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 15px;
+    box-shadow:  10px 10px 10px 2px  rgba(0, 0, 0, .2)
+    
+    
+}
+
+.faInfo-margin-box{
+    margin: 20px;
+}
+
+
+.faInfo{
+    width: fit-content;
+    
+    height: auto;
+    padding:  5px;
+    border-radius: 20px;
+    margin: 50px;
+    
+}
+
+
+/* ThemesThemesThemesThemesThemesThemesThemes */
+
+
+/* OneOneOneOneOneOneOneOneOneOne */
+
+.theme-one {
+    
+    background-color: rgba(116, 146, 104, .75);
+  
+
+}
+.theme-one >.faInfo-header-box, .faInfo-info-box  {
+    border: solid #acbfa4 ;
+    
+    
+    
+}
+.theme-one >.faInfo-info-box  {
+    border: solid #c6d3c0;
+    background-color: #749268;
+}
+/* TwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwo */
+
+/* .faInfo-theme-two {
+    width: 100%;
+    background-color: #5576A1;
+    height: auto;
+    padding:  40px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+
+}
+.faInfo-theme-two >.faInfo-header-box, .faInfo-info-box  {
+    background-color: #2e4057 ;
+    
+}
+.faInfo-theme-two >.faInfo-info-box  {
+    background-color: #202c3d ;
+    border: solid;
+    border-color: #2e4057;
+    color: white;
+    
+} */
+/* threethreethreethreethreethreethreethreethreethreethree */
+
+/* .faInfo-theme-three {
+    width: 100%;
+    background-color: #78B2DB;
+    height: auto;
+    padding:  40px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+
+}
+.faInfo-theme-three >.faInfo-header-box, .faInfo-info-box  {
+    background-color: #3e92cc ;
+    
+}
+.faInfo-theme-three >.faInfo-info-box  {
+    background-color: #276693 ;
+    border: solid;
+    border-color: #3e92cc;
+    color: white;
+    
+} */

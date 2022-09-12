@@ -1,0 +1,200 @@
+.infocard{
+    height: auto;
+    min-height: 200px; 
+    width: 80%;
+    background-color: rgba(32, 44, 61, .75);
+    color: white;
+    border-radius: 20px;
+    margin: auto  auto 3rem ;
+    padding: 2rem;
+
+}
+
+.infocard-header{
+    width: 80%;
+    min-height: 2rem;
+    background-color: rgba(32, 44, 61, .75);
+    color: white;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    border: solid 2px #2E4057;
+    box-shadow:  10px 10px 10px 2px  rgba(0, 0, 0, .2)
+}
+
+.infocard-body{
+    width: 80%;
+    min-height: 2rem;
+    background-color: rgba(255, 255, 255, .6);
+    color: #2E4057;
+    font-weight: 700;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    margin: auto;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    /* border: solid 1px #2E4057; */
+    box-shadow:  10px 10px 10px 2px  rgba(0, 0, 0, .2)
+}
+
+.infocard-body >div{
+    margin-left: .3rem;
+    margin-right: .3rem;
+    display: flex;
+}
+
+.infocard-body-link{
+    top: 10rem;
+    position: sticky;
+    top: 10rem;
+    border:  solid 1px;
+    border-radius: 5%;
+    padding: .3rem;
+    height: fit-content;
+    min-width: fit-content;
+}
+
+
+.infocard-icon-card{
+    background-color:  rgba(32, 44, 61, .75);
+    width: 25%;
+    min-width: fit-content;
+    height: 6rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+
+    
+   
+}
+
+.infocard-icon-card-icon{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.infocard-icon-card:hover{
+   transform: scale(1.1);
+   border:  solid 1px;
+   
+   transition: linear .1s;
+   
+}
+
+.infocard-icon-card-text{
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.infocard-section{
+    width: 80%;
+    min-height: 2rem;
+    background-color: rgba(255, 255, 255, .1);
+    color: #2E4057;
+    font-weight: 700;
+    padding: 1rem 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    /* border: solid 1px #2E4057; */
+    box-shadow:  10px 10px 10px 2px  rgba(0, 0, 0, .2)
+}
+
+
+
+.infocard-table > p {
+    font-size: .8rem;
+    cursor: pointer;
+   
+}
+.infocard-table > a {
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+
+ @media (max-width: 700px){
+    .infocard{
+        height: auto;
+        min-height: 200px;
+        width: 100%;
+        background-color: rgba(32, 44, 61, .75);
+        color: white;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        padding: 0rem;
+    
+    }
+    .infocard-body{
+        width: 100%;
+        padding: 5px;  
+    }
+
+
+    .infocard-body-link > table >  tr > td > p{
+        
+        font-size: 0;
+    }
+    .infocard-body-link > table >  tr > td> a > p{
+        
+        font-size: 0;
+    }
+    .infocard-body-link > table > tr > td >*{
+        margin-top: 12px;
+        margin-bottom: 12px;
+        transform: scale(1.8);        
+    }
+    .infocard-body-link > table > tr > td > a>*{
+        margin-top: 12px;
+        margin-bottom: 12px;
+        transform: scale(1.8);        
+    }
+
+    .infocard-icon-card{
+        background-color:  rgba(32, 44, 61, .75);
+        width: 25%;
+        height: 6rem;
+        border-radius: 1rem;
+        padding: .4rem;
+        margin: .5rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .infocard-icon-card-icon{
+      transform: scale(.7);  
+    }
+
+    .infocard-section{
+        width: 100%;
+        padding: 0%;
+        margin: 0;
+       
+    }
+    .infocard-header{
+        width: 100%;
+       
+    }
+    .infocard-icon-card-text{
+        color: white;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: .6rem;
+    }
+    
+
+ }

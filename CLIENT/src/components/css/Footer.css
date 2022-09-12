@@ -1,0 +1,39 @@
+.footer-links > *{
+   color: white;
+   font-style: normal;
+   text-decoration: none;
+   
+}
+
+.footer-box{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.visible{
+    z-index:1 ;    
+}
+
+@media (max-width: 700px) {
+    .footer-box{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 10px;  
+    } 
+
+    .footer-box{
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        background-color: rgba(0, 0, 0, .5);
+        width: 100%;
+    }
+
+
+
+
+}

@@ -1,0 +1,138 @@
+
+
+
+
+.char-container{
+    width: 80%;
+    border: solid 1px;
+    border-radius: 10px;
+    border-color:white;
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: rgba(32, 44, 61, .9);
+    color: white;
+}
+
+.char-containter-top{
+    display: flex;
+    width: 90%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border-spacing: 10px;
+    margin-bottom: 1%;
+}
+
+.char-container-bottom{
+    display: grid;
+    grid-template-columns: 60% 40%; 
+    grid-template-rows: auto;
+    grid-column-gap: 5px;
+    }
+
+
+.char-img{    
+    height: 100px;
+    width: 316px;
+    margin: 10px;
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .1);
+    object-fit: contain;
+    
+}
+
+
+
+
+
+.char-info-text {
+    padding: 5px;
+    margin: 10px;
+    width: auto;
+
+}
+.char-name{
+    font-size: 30px;
+}
+
+.char-header{
+    margin: 10px;
+
+
+}
+.char-title{
+    font-size: 12px;
+}
+
+
+
+.infobox{   
+    height: auto;
+    margin: 10px;
+    background-color:  rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;   
+    border: solid  1px white 
+}
+
+
+
+
+
+.infobox-row{
+ display: flex;
+ flex-wrap: wrap;
+ align-content: flex-start;
+ border: solid  1px white;
+ border-radius: 10px;
+ margin-bottom: 10px;
+
+
+}
+
+.infobox-row-link{
+    background-color:white;
+    border: solid 1px rgba(239, 130, 117, .9);
+    box-shadow: 5px 3px 3px rgba(0, 0, 0, .1);
+}
+.infobox-row-link:hover{
+   transform: scale(1.05);
+   background: rgba(0, 0, 0, .1);
+   transition: 500ms;
+}
+
+.infobox-row-link >*, .infobox-row-link >*>a{
+    color: #2E4057;
+    cursor: pointer;
+}
+.infobox-row-link:hover >*, .infobox-row-link:hover >*>a{
+    color: white;
+    
+}
+
+
+.infobox-row-content{
+    margin-right: 10px;
+    margin-left: 5px; 
+    list-style:  none;
+      
+}
+
+
+@media (max-width: 700px){
+
+
+.char-container{
+    width: 100%; 
+   
+    margin: 0;
+    margin-top: 10px;
+    padding: 5px;
+
+}
+
+
+}

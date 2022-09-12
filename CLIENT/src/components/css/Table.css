@@ -1,0 +1,25 @@
+td {   
+    color: white;
+    align-items: center;
+    margin-top: .2rem;
+
+}
+
+
+.compare-head {
+    background-color:  rgba(32, 44, 61, .7);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.compare-body{
+    background-color:  rgba(46, 64, 87, .7);
+    padding: 2rem;
+}
+.compare-body > tr >td{
+    padding-left:  7px;
+    padding-right: 7px;
+    padding-bottom: 10px;
+    border: solid 1px white;
+}
+
