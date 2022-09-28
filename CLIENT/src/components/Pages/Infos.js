@@ -72,6 +72,10 @@ export default function Infos() {
           </Link>
         </div>
       </div>
+
+
+
+      
     </>
   );
 }

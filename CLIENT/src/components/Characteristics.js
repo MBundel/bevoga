@@ -22,7 +22,7 @@ const Characteristics = (props) => {
             {/* Start  */}
             <div className="infobox-row infobox-row-link">
               <div className="infobox-row-content">
-                <a href={props.website}>Website:</a>
+                <a href={props.website} target="_blank" rel="noreferrer">Website:</a>
               </div>
               <div className="infobox-row-content">
                 <a href={props.website} target="_blank" rel="noreferrer">{props.name}</a>

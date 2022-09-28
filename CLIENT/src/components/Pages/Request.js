@@ -1,114 +1,3 @@
-// import React from "react";
-// import { useState } from "react";
-// import { db } from "../../lib/init-firebase.js";
-// import { collection, addDoc } from "firebase/firestore";
-
-// import "../css/MainPages.css";
-
-// export default function Request() {
-//   const [newFirstName, setNewFirstName] = useState("");
-//   const [newLastName, setNewLastName] = useState("");
-//   const [newNumber, setNewNumber] = useState(0);
-//   const [newMail, setNewMail] = useState(0);
-//   const [newLoan, setNewLoan] = useState(0);
-//   const [newBirthday, setNewBirthday] = useState(0);
-
-//   const usersCollectionRef = collection(db, "requester");
-
-//   const createRequester = async (event) => {
-//     event.preventDefault();
-//     await addDoc(usersCollectionRef, {
-//       firstName: newFirstName,
-//       lastName: newLastName,
-//       phone: newNumber,
-//       email: newMail,
-//       loan: newLoan,
-//       birthday: newBirthday,
-//     });
-//   };
-
-//   const [show, setShow] = useState(true);
-
-//   return (
-//     <div>
-//       <img className="background-img" src="../../img/unterschrift.jpg" alt="" />
-//       <div className="space"></div>
-//       <div className="centered box-transparent-fit">
-//         {show ? (
-//           <div>
-            
-//             Antrag bald online abschießbar, hier Angebot einfordern <br />
-//             <form>
-//               <input
-//                 placeholder="Dein Vorname"
-//                 required
-//                 onChange={(event) => {
-//                   setNewFirstName(event.target.value);
-//                 }}
-//               />
-//               <input
-//                 placeholder="Dein Nachname"
-//                 required
-//                 onChange={(event) => {
-//                   setNewLastName(event.target.value);
-//                 }}
-//               />
-//               <input
-//                 type="tel"
-//                 placeholder="Deine Telefonnummer"
-//                 required
-//                 onChange={(event) => {
-//                   setNewNumber(event.target.value);
-//                 }}
-//               />
-//               <input
-//                 type="email"
-//                 placeholder="Deine Mailadresse"
-//                 required
-//                 onChange={(event) => {
-//                   setNewMail(event.target.value);
-//                 }}
-//               />
-//               <input
-//                 type="date"
-//                 placeholder="Dein Geburtstag"
-//                 required
-//                 onChange={(event) => {
-//                   setNewBirthday(event.target.value);
-//                 }}
-//               />
-
-//               <input
-//                 type="number"
-//                 placeholder="Dein monatliches Brutto"
-//                 required
-//                 onChange={(event) => {
-//                   setNewLoan(event.target.value);
-//                 }}
-//               />
-
-//               <div className="space3"></div>
-//               <button
-//                 className="btn btn-middle btn-transparent"
-//                 onClick={(event) => {
-//                   createRequester(event);
-//                   setShow(false);
-//                 }}
-//               >
-//                 Abschicken
-//               </button>
-//             </form>
-//           </div>
-//         ) : null}
-//         {!show ? <div> Erfolgreich abgeschickt! </div> : null}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
 
 
 //-------------------------------------------------------------------
@@ -119,6 +8,12 @@ import FormForRequest from "../request-components/FormForRequest"
 import PossibilityCheck from "../request-components/PossibilityCheck";
 import GkvOptions from "../request-components/GkvOptions";
 import BuSumCalculator from "../request-components/BuSumCalculator";
+import PersonalData from "../request-components/PersonalData";
+import PeronlalInformation from "../request-components/PeronlalInformation";
+import Submit from "../request-components/Submit";
+import SendStatus from "../request-components/SendStatus";
+import PersonalData2 from "../request-components/PersonalData2";
+import NecessaryApproval from "../request-components/NecessaryApproval";
 
 import { useState } from "react";
 import { db } from "../../lib/init-firebase.js";
@@ -126,8 +21,11 @@ import { collection, addDoc } from "firebase/firestore";
 
 import "../css/MainPages.css";
 import "../css/Request.css";
-import PersonalData from "../request-components/PersonalData";
-import PeronlalInformation from "../request-components/PeronlalInformation";
+
+
+
+
+
 
 
 
@@ -135,35 +33,58 @@ import PeronlalInformation from "../request-components/PeronlalInformation";
 // Creater User and Send User to Firestore
 
 export default function Request() {
-  const [newFirstName, setNewFirstName] = useState("");
-  const [newLastName, setNewLastName] = useState("");
-  const [newNumber, setNewNumber] = useState(0);
-  const [newMail, setNewMail] = useState(0);
-  // const [newLoan, setNewLoan] = useState(0);
-  // const [newBirthday, setNewBirthday] = useState(0);
+  const [formForRequestData, setFormForRequestData] = useState("");
   const [newsletterWA, setNewsletterWA] =useState(false);
   const [newsletterMail, setNewsletterMail] =useState(false);
+  const [possibility, setPossibility] =useState(false)
+  const [membership, setMembership] =useState("")
+  const [company, setCompany] = useState("")
+  const [brutto, setBrutto] = useState(0)
+  const [insuredSum, setInsuredSum] =useState(0)
+  const [price, setPrice] = useState(0)
+  const [whiteCollar, setWhiteCollar]= useState(false)
+  const [personalInfos, setPersonalInfos]= useState("")
+  const [personalData, setPersonalData]= useState("")
+  const [personalData2, setPersonalData2]= useState("")
+  const [necessaryApproval, setNecessaryApproval]= useState("")
+
 
   const usersCollectionRef = collection(db, "requester");
 
   const createRequester = async (event) => {
     event.preventDefault();
     await addDoc(usersCollectionRef, {
-      firstName: newFirstName,
-      lastName: newLastName,
-      phone: newNumber,
-      email: newMail,
+      formForRequestData: formForRequestData,
       whatsappPermission: newsletterWA,
       emailPermission: newsletterMail,
-      // loan: newLoan,
-      // birthday: newBirthday,
+      insurable: possibility,
+      membership: membership,
+      company: company,
+      insuredSum: insuredSum,
+      bruttoIncome: brutto,
+      FinalPrice: price,
+      whiteCollar: whiteCollar,
+      personalInfos: personalInfos,
+      personalData: personalData,
+      personalData2: personalData2,
+      necessaryApproval: necessaryApproval
+     
     });
   };
 
+ // --------------- show and hide forms -----------
+  const [showBuSumCalculator, setShowBuSumCalculator]         = useState(true)
+  const [showFormForRequest, setShowFormForRequest]           = useState(false)
+  const [showGkvOptions, setShowGkvOptions]                   = useState(false)
+  const [showNecessaryApproval, setShowNecessaryApproval]     = useState(false)
+  const [showPersonalData, setShowPersonalData]               = useState(false)
+  const [showPersonalData2, setShowPersonalData2]             = useState(false)
+  const [showPersonalInformation, setShowPersonalInformation] = useState(false)
+  const [showPossibilityCheck, setShowPossibilityCheck]       = useState(false)
+  const [showResult, setShowResult]                           = useState(false)
+  const [showSubmit, setShowSubmit]                           = useState(false)
+  const [showPermission, setShowPermission]                   = useState(false)
  
-  const [showPermission, setShowPermission] = useState(true);
-  const [showFormForRequest, setShowFormForRequest] = useState(true);
-
   
 
 
@@ -175,42 +96,124 @@ export default function Request() {
       <div className="request-container">
      
      
-      
+       
 
-        <div className="space"> XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+        {/* ------------------------------------------------------------------------- */}
 
-       {showPermission ? (<Permission 
-        sendPermissionWA= {newsletterWA => setNewsletterWA(newsletterWA)}        
-        sendPermissionMail= {newsletterMail => setNewsletterMail(newsletterMail)}        
-        sendShowPermission= {showPermission => setShowPermission(showPermission)}        
-        sendShowFormForRequest= {showFormForRequest => setShowFormForRequest(showFormForRequest)}        
+       {showPermission      ? (         <Permission 
+        sendShowOwn       = {showPermission      => setShowPermission         (showPermission)}        
+        sendShowNext      = {showFormForRequest  => setShowFormForRequest     (showFormForRequest)}   
+        sendPermissionWA  = {newsletterWA        => setNewsletterWA           (newsletterWA)}        
+        sendPermissionMail= {newsletterMail      => setNewsletterMail         (newsletterMail)}        
+             
         />):null}
 
-        <div className="space"> XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
-
-        {showFormForRequest ? ( <FormForRequest
-          sendShowFormForRequest={showFormForRequest => setShowFormForRequest(showFormForRequest)}
-          sendShowPermission={showPermission => setShowPermission(showPermission)}
-          sendNewFirstName={newFirstName => setNewFirstName(newFirstName)}
-          sendNewLastName={newLastName => setNewLastName(newLastName)}
-          sendNewNumber={newNumber => setNewNumber(newNumber)}
-          sendNewMail={newMail => setNewMail(newMail)}
+        {/* ------------------------------------------------------------------------- */}
+        
+        {showFormForRequest ? (   <FormForRequest
+          sendShowLast =  {showPermission         => setShowPermission         (showPermission)}
+          sendShowOwn  =  {showFormForRequest     => setShowFormForRequest     (showFormForRequest)}
+          sendShowNext =  {showPossibilityCheck   => setShowPossibilityCheck   (showPossibilityCheck)}
+          sendData     =  {FormForRequestData     => setFormForRequestData     (FormForRequestData)}       
         />):null}
 
-          <div className="space"> XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+        {/* ------------------------------------------------------------------------- */}
 
-            <PossibilityCheck/>
+        {showPossibilityCheck ? (  <PossibilityCheck
+          sendShowLast   = {showFormForRequest    => setShowFormForRequest      (showFormForRequest)}
+          sendShowOwn    = {showPossibilityCheck  => setShowPossibilityCheck    (showPossibilityCheck)}
+          sendShowNext   = {showNecessaryApproval => setShowNecessaryApproval   (showNecessaryApproval)}
+          sendPossibility= {possibility           => setPossibility             (possibility)}
+          
+        />):null}
 
-            <div className="space"> XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+        {/* ------------------------------------------------------------------------- */}
+         {showNecessaryApproval ? (<NecessaryApproval
+          sendShowLast= {showPossibilityCheck    => setShowPossibilityCheck     (showPossibilityCheck)}
+          sendShowOwn = {showNecessaryApproval   => setShowNecessaryApproval    (showNecessaryApproval)}
+          sendShowNext= {showGkvOptions          => setShowGkvOptions           (showGkvOptions)}
+          sendData    = {necessaryApproval       => setNecessaryApproval        (necessaryApproval)}
+         />):null}    
+       
+        {/* ------------------------------------------------------------------------- */}
+         
+        {showGkvOptions  ? (             <GkvOptions
+          sendShowLast  ={showNecessaryApproval   => setShowNecessaryApproval  (showNecessaryApproval)}
+          sendShowOwn   ={showGkvOptions          => setShowGkvOptions         (showGkvOptions)}
+          sendShowNext  ={showBuSumCalculator     => setShowBuSumCalculator    (showBuSumCalculator)}
+          sendMembership={membership              => setMembership             (membership)}
+          sendCompany   ={company                 => setCompany                (company)}
+        />): null}
 
-            <GkvOptions/>
+         {/* ------------------------------------------------------------------------- */}  
 
-            <div className="space"> XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
-            <BuSumCalculator/>
-            <div className="space"> XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
-            <PeronlalInformation/>
-            <div className="space"> XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
-            <PersonalData/>
+        {showBuSumCalculator ? (    <BuSumCalculator
+          sendShowLast  = {showGkvOptions         => setShowGkvOptions         (showGkvOptions)}
+          sendShowOwn   = {showBuSumCalculator    => setShowBuSumCalculator    (showBuSumCalculator)}
+          sendShowNext  = {showPersonalInformation=> setShowPersonalInformation(showPersonalInformation)}
+          sendBrutto    = {brutto                 => setBrutto                 (brutto)}
+          sendInsuredSum= {insuredSum             => setInsuredSum             (insuredSum)}
+          sendPrice     = {price                  => setPrice                  (price)}
+          sendCollar    = {whiteCollar            => setWhiteCollar            (whiteCollar)}        
+        />): null}
+          
+         {/* ------------------------------------------------------------------------- */}  
+   
+        {showPersonalInformation? (<PeronlalInformation
+          sendShowLast=  {showBuSumCalculator     => setShowBuSumCalculator    (showBuSumCalculator)}
+          sendShowOwn =  {showPersonalInformation => setShowPersonalInformation(showPersonalInformation)}
+          sendShowNext=  {showPersonalData        => setShowPersonalData       (showPersonalData)}
+          sendData    =  {personalInfos           => setPersonalInfos          (personalInfos)}
+        />): null}  
+
+         {/* ------------------------------------------------------------------------- */}  
+        {showPersonalData?(           <PersonalData
+          sendShowLast= {showPersonalInformation  => setShowPersonalInformation(showPersonalInformation)}
+          sendShowOwn = {showPersonalData         => setShowPersonalData       (showPersonalData)}
+          sendShowNext= {showPersonalData2        => setShowPersonalData2      (showPersonalData2)}
+          sendData    = {personalData             => setPersonalData           (personalData)}
+        />):null}
+
+         {/* ------------------------------------------------------------------------- */}  
+        {showPersonalData2?(         <PersonalData2
+         sendShowLast=  {showPersonalData         => setShowPersonalData       (showPersonalData)}
+         sendShowOwn =  {showPersonalData2        => setShowPersonalData2      (showPersonalData2)}
+         sendShowNext=  {showSubmit               => setShowSubmit             (showSubmit)}
+         sendData    =  {personalData2            => setPersonalData2          (personalData2)}
+        />):null}
+
+         {/* ------------------------------------------------------------------------- */}  
+           {showSubmit ?( 
+            <> Hiermit möchte ich mir ein Angebot zukommen lassen. 
+             <div className="checkbox-div">
+             <div className="request-footer-moreButton">
+               <div>
+                 <button className="btn btn-transparent"
+                   onClick={(event) => {
+                     event.preventDefault();
+                     setShowSubmit(false);
+                     setShowPersonalData2(true);
+                   }}>Zurück</button>
+               </div>
+              
+               <button className="btn btn-transparent"
+               onClick={ async(event) =>{
+               
+                 setShowSubmit(false)
+                 await createRequester(event)
+                 setShowResult(true)
+
+               }}>
+                 Abschicken
+               </button>
+             </div>
+           </div></>
+            ): null}
+        {/* ------------------------------------------------------------------------- */}
+            {showResult?(<SendStatus/>):null} 
+        
+
+            
       </div>
        
     </div> 

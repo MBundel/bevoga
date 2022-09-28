@@ -1,7 +1,7 @@
 export const questionAndAnswer = [
   [
     "Welche Gesundheitsfragen gibt es?",
-    "Es gibt 5 Fragen,  die darauf abziehlen sicherzustellen, dass man aktuell nicht berufsunfähig ist oder die Diagnose der Berufsunfähigkeit bevorsteht.",
+    "Es gibt 5 Fragen,  die sicherstellen, dass man aktuell nicht berufsunfähig ist oder die Diagnose der Berufsunfähigkeit bevorsteht.",
     "Es werden ausführliche Gesundheitsfragen gestellt, die u.a. auch 10 Jahre in die Vergangenheit fragen, manchmal darüber hinaus. Es werden alle Sachen abgefragt: Rücken, Psyche, chronische Krankheiten, Skelett, Verdauung, Allergien, etc.",
   ],
   [
@@ -42,7 +42,7 @@ export const questionAndAnswer = [
   [
     "Wie sind chronische Krankheiten und Vorerkrankungen abgesichert?",
     "Solltest du bei Antragsstellung trotz der gesundheitlichen Einschränkungen in der Lage sein, deinen Beruf uneingeschränkt nachzugehen, dann sind diese Krankheiten abgesichert.",
-    "Wegen der Gesundheitsfragen, werden zumeist chronosche Krankheiten oder Vorerkrankungen, die bis zu 10 Jahren stattgefunden haben, von der Versicherung oftmals ausgeschlossen. Wer wegen Migräne, Rückenschmerzen, Darmprobleme in Behandlung war, sich psychologische Unterstützung gesucht hat, hat meistens nicht nur einen Ausschluss der Krankheiten, sondern wir i.d.R. von den Gesellschaften als NICHT versicherbar bewertet.",
+    "Wegen der Gesundheitsfragen, werden zumeist chronische Krankheiten oder Vorerkrankungen, die bis zu 10 Jahren stattgefunden haben, von der Versicherung oftmals ausgeschlossen. Wer wegen Migräne, Rückenschmerzen, Darmprobleme in Behandlung war, sich psychologische Unterstützung gesucht hat, hat meistens nicht nur einen Ausschluss der Krankheiten, sondern wir i.d.R. von den Gesellschaften als NICHT versicherbar bewertet.",
   ],
   [
     "Muss ich die Beiträge für die Versicherung zahlen, wenn ich berufsunfähig werde?",
@@ -52,7 +52,7 @@ export const questionAndAnswer = [
   [
     "Wann habe ich Anspruch auf eine Auszahlung der Leistung?",
     "Nach Vertragsabschluss besteht eine Wartezeit von 6 Monaten. Das ist weniger wild, als es klingt, denn berufsunfähig gilt derjenige, der nicht in der Lage ist, seine berufliche Tätigkeit nicht mehr als 50% länger als 6 Monate auszuüben. Diese 6 Monate werden i.d.R. von der Krankenkasse mit dem Krankengeld überbrückt.",
-    "Wenn der Vertrag anstandslos eingereicht wurde. Auch hier gelten die 6 Monate, bis eine Berufsunfähigkeit festgestellt wird - einige Gesellschaften haben auch Sonderfälle, wie z.B. Krebs, dass sofort gezahlt wird und keine 6 Monate gewartet werden muss - sobald die Berufsunfähigkeitsversicherung zahlt, besteht kein Ansrpch auf das Krankengeld der Krankenkasse",
+    "Wenn der Vertrag anstandslos eingereicht wurde. Auch hier gelten die 6 Monate, bis eine Berufsunfähigkeit festgestellt wird - einige Gesellschaften haben auch Sonderfälle, wie z.B. Krebs, dass sofort gezahlt wird und keine 6 Monate gewartet werden muss - sobald die Berufsunfähigkeitsversicherung zahlt, besteht kein Anspruch auf das Krankengeld der Krankenkasse",
   ],
   [
     "Welche Berufsgruppen gibt es?",
@@ -67,7 +67,7 @@ export const questionAndAnswer = [
   [
     "Was sind die Vorteile?",
     "keine Gesundheitsfragen, günstig",
-    "Studenten, Schüler, Mitglieder der privaten Krankenkasse sind hier versicherbar. Absicherungszeitraum kann auch über 20 Jahre garantiert sein.",
+    "Studenten, Schüler und Mitglieder der privaten Krankenkasse sind hier versicherbar.  Der Anspruch auf Leistung kann auch über 20 Jahre garantiert sein.",
   ],
 ];
 
@@ -87,18 +87,18 @@ export const buQuestionsKiss = [
     panel: 3,
     question: "Wann gilt man als berufsunfähig?",
     answer:
-      " Berufsunfähig ist derjenige, der seinen aktuellen Job nur noch weniger als 50% über 24 Wochen ausüben kann.",
+      " Berufsunfähig ist derjenige, der seinen aktuellen Job aufgrund von Krankheit oder Unfall länger als  24 Wochen  nicht ausüben kann. gute Versicherer zahlen schon bei 50% berufsunfähigkeit",
   },
   {
     panel: 4,
     question:
       "Was passiert, wenn man keine Berufsunfähigkeitsversicherung hat?",
     answer:
-      "Nach 30 Wochen Krankheit kann das Krankengeld entfallen und dann muss man von seinem Ersparten oder dem Unterhalt seines Partners leben. Ist beides nicht (mehr) vorhanden, dann Harz4.",
+      "Nachdem die Krankenkasse das Krankengeld einstellt,  kann ein Antrag auf Harz4 gestellt werden.",
   },
   {
     panel: 5,
-    question: "Welche Alternative gibt er zur Berufsunfähigkeitsversicherung?",
+    question: "Welche Alternative gibt es zur Berufsunfähigkeitsversicherung?",
     answer: "Keine.",
   },
 ];
@@ -142,7 +142,7 @@ export const buQuestionsLong = [
   {
     panel: 8,
     question: "Wie wird man berufsunfähig?",
-    answer: " Berufsunfähigkeit entsteht durch Krankheit oder Unfall, die einen langfristig bei der Arbeit ausfallen lässt. Es spielt auch keine Rolle, ob es durch die Arbeit oder am Arbeitsplatz verursacht wurde. Auch im privaten Kontext greift die Versicherung.",
+    answer: " Berufsunfähigkeit entsteht durch Krankheit oder Unfall, die einen langfristig bei der Arbeit ausfallen lässt. Versichert ist man 24/7, egal ob Arbeitszeit, Feierabend, am Wochenende beim Hausbau mithelfen oder Skiurlaub im Ausland.",
   },
   {
     panel: 9,
@@ -152,12 +152,12 @@ export const buQuestionsLong = [
   {
     panel: 10,
     question: "Wann gilt man berufsunfähig?",
-    answer: "Berufsunfähig ist derjenige, der seinen aktuellen Job nur noch weniger als 50% über eine längere Zeit ausüben kann und i.d.R. mindestens 24 Wochen ausfällt. In einigen Fällen erhält man sofort die BU-Rente, z.B. bei einem gravierenden Unfall oder bei Krebs.",
+    answer: "Berufsunfähig ist derjenige, der seinen aktuellen Job  aufgrund von Krankheit oder Unfall i.d.R. mindestens 24 Wochen ausfällt. In einigen Fällen erhält man sofort die BU-Rente, z.B. bei einem gravierenden Unfall oder bei Krebs. Gute Versicherer erkennen eine Berufsunfähigkeitsversicherung an, sobald jemand seinen Beruf weniger als 50% ausüben kann und das über 24 Wochen.",
   },
   {
     panel: 11,
     question: "Was passiert, wenn man keine Berufsunfähigkeitsversicherung hat?",
-    answer: "Der Arbeitgeber zahlt dir 6 Wochen lang dein Gehalt weiter, danach zahlt die Krankenkasse 70% deines Bruttogehaltes bis zu 78 Wochen weiter. Allerdings kann die Krankenkasse die Zahlungen auch schon nach 24 Wochen einstellen. Wer keine Berufsunfähigkeitsversicherung hat, muss danach von seinen Ersparnissen leben. Danach ist man Arbeitslogengeld II (Harz 4) berechtigt, nur wer die Wohnung in einer eheähnlichen Gemeinschaft teilt, erhält wegen der Bedarfsgemeinschaft und dem Einkommen der besseren Hälfte wahrscheinlich nichts. Spich, erst wenn alles weg ist, gibt esstaatliche Unterstützung. Und aus diesem Grund ist die Berufsunfähigkeitsversicherung eine Pflicht für jeden, denn sie sichert Deine Existenz ab.",
+    answer: "Der Arbeitgeber zahlt dir 6 Wochen lang dein Gehalt weiter, danach zahlt die Krankenkasse 70% deines Bruttogehaltes bis zu 78 Wochen weiter. Allerdings kann die Krankenkasse die Zahlungen auch schon vorher einstellen, wenn der medizinische Dienst der Krankenversicherung die Arbeitsunfähigkeitsbescheinigung für nicht plausibel erklärt. Wer keine Berufsunfähigkeitsversicherung hat, muss danach von seinen Ersparnissen leben. Danach ist man Arbeitslogengeld II (Harz 4) berechtigt, nur wer die Wohnung in einer eheähnlichen Gemeinschaft teilt, erhält wegen der Bedarfsgemeinschaft und dem Einkommen der besseren Hälfte wahrscheinlich nichts. Spich, erst wenn alles weg ist, erhältst du staatliche Unterstützung. Und aus diesem Grund ist die Berufsunfähigkeitsversicherung eine Pflicht für jeden, denn sie sichert Deine Existenz ab.",
   },
   {
     panel: 12,

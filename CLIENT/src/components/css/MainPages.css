@@ -45,6 +45,16 @@ input, select {
   margin-top: .5rem;  
   padding-left: 20px;  
 }
+
+input:disabled{
+  background-color: #2E4057; 
+  color: grey; 
+}
+
+input:disabled::placeholder{
+  color: grey;
+}
+
 option{
   color: white;
   background-color: #2E4057;
@@ -110,6 +120,14 @@ object-position: top left;
     width: fit-content;  
     
   }
+ 
+  .clickable{
+    cursor: pointer;
+    font-size:  0.7rem;
+    color: var(--tertiarycolor);
+
+  }
+  
 
 
 .contactLink:hover{

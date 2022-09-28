@@ -97,13 +97,10 @@ const Form = (props) => {
     const isValid = validate();
     // sucsessful submit
     if (isValid) {
-      props.sendNewFirstName(values.firstName);
-      props.sendNewLastName(values.lastName);
-      props.sendNewNumber(values.phone);
-      props.sendNewMail(values.email);
-      setDeactivateButton(true);
-      await createUser(event);
-      props.sendShowFormForRequest(false);
+      props.sendData(values);     
+      setDeactivateButton(true);      
+      props.sendShowOwn(false);      
+      props.sendShowNext(true)
       // setShow(false);
     }
   };
@@ -149,6 +146,7 @@ const Form = (props) => {
           }}
         />
         {errors.phone && <p>{errors.phone}</p>}
+        
         <input
           type="email"
           name="email"
@@ -162,14 +160,15 @@ const Form = (props) => {
         />
         {errors.email && <p>{errors.email}</p>}
         <br /> <br />
+
+       {/* ------------------------ Button Footer ----------------------- */}
         <div className="request-footer-moreButton">
           <button
             className="btn btn-transparent"
             onClick={(event) => {
               event.preventDefault();
-              props.sendShowFormForRequest(false);
-              props.sendShowPermission(true);
-             
+              props.sendShowOwn(false);
+              props.sendShowLast(true);
             }}
           >
             Zurück
@@ -177,6 +176,7 @@ const Form = (props) => {
           <button
             className="btn btn-transparent"
             onClick={(event) => {
+              event.preventDefault();
               handleSubmit(event);
             }}
             disabled={deactivateButton}

@@ -65,8 +65,8 @@ function Permission(props) {
   // This will double check, if validation is correact and send data to parent component
   function handleSubmit() {
     if (checkValue1 === true && checkValue2 === true && checkValue3 === true) {
-      props.sendShowPermission(false);
-      props.sendShowFormForRequest(true);
+      props.sendShowOwn(false);
+      props.sendShowNext(true);
     } else {
       alert("die notwendigen Haken setzen!");
     }
@@ -107,7 +107,7 @@ function Permission(props) {
                       VersVerm
                     </span>
                   </a>
-                  die&nbsp; gelesen zu haben.
+                  &nbsp; gelesen zu haben.
                 </p>
               </div>
             </div>
@@ -202,6 +202,8 @@ function Permission(props) {
               </label>
             </div>
           </div>
+{/* -------------------------Footer--------------------- */}
+
           <div className="request-footer">
             <button
               disabled={buttonState}

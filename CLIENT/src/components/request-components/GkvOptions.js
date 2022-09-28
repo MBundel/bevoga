@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -7,16 +7,51 @@ import FormLabel from "@mui/material/FormLabel";
 
 import * as partnerChar from "../../records/PartnerChar.js";
 
-function GkvOptions() {
+function GkvOptions(props) {
   // Modal
-  const props = partnerChar.PartnerChar;
-  const [showModal, setShowModal] = useState(true);
+  const GKV = partnerChar.PartnerChar;
+  const [showModal, setShowModal] = useState(false);
 
-  const [checked, setChecked] = useState(true);
+ 
+// radio1, membership
+const[membership, setMembership] = useState("")
 
-  const handleChange = (e) => {
-    setChecked(e.target.checked);
-  };
+const handleRadio1 = (e) =>{
+  setMembership(e.target.value)
+  handleButtonState()  
+  
+}
+
+
+// radio2, Insureance Company
+const[company, setCompany] = useState("")
+
+const handleRadio2 = (e) =>{
+  setCompany(e.target.value)
+  handleButtonState()  
+  
+}
+
+// disabeld button
+
+const [disabledButton, setButtonState] = useState(true);
+
+
+// handle buttonState
+
+const handleButtonState = () => {    
+  if (membership  && company) {
+    setButtonState(false);
+  }
+  
+};
+// immediately update
+
+useEffect(() => {
+  handleButtonState();
+}, [company, membership]);
+
+//-------------------HTML CODE ----------------------
   return (
     <div>
       <div>Vorbereitung zum Antrag</div>
@@ -25,8 +60,8 @@ function GkvOptions() {
           {" "}
           Für den Antrag musst du Mitgleid einer der unten genannten
           Krankenkassen sein.
-          <FormLabel style={{ color: "white" }}>Dein Status</FormLabel>
-          <RadioGroup>
+          <FormLabel  style={{ color: "white" }}>Dein Status</FormLabel>
+          <RadioGroup value={membership} onChange={handleRadio1}>
             <FormControlLabel
               value="exchange"
               control={<Radio style={{ color: "white" }} />}
@@ -41,10 +76,10 @@ function GkvOptions() {
         </FormControl>
 
         <FormControl>
-          <FormLabel style={{ color: "white" }}>
+          <FormLabel style={{ color: "white" }} >
             Wo bist du krankenversichert?
           </FormLabel>
-          <RadioGroup>
+          <RadioGroup value={company} onChange={handleRadio2}>
             <FormControlLabel
               value="IKK"
               control={<Radio style={{ color: "white" }} />}
@@ -69,23 +104,26 @@ function GkvOptions() {
         >
           Bonusprogramme{" "}
         </div>
+
+
+         {/*  Modal Bonusprogramme */}
         {showModal ? (
           <>
             <div
               className="modal"
               onMouseLeave={() => setShowModal((prevValue) => !prevValue)}
             >
-              {props
-                .filter((props) => props.companyType === "GKV")
-                .map((props) => (
+              {GKV
+                .filter((GKV) => GKV.companyType === "GKV")
+                .map((GKV) => (
                   <div className="modal-list">
                     <div>
                     <div className="char-containter-top-content">
-                      <a href={props.website} target="_blank" rel="noreferrer">
+                      <a href={GKV.website} target="_blank" rel="noreferrer">
                         <img
                           className="char-img"
-                          src={props.img}
-                          alt={props.srcAlt}
+                          src={GKV.img}
+                          alt={GKV.srcAlt}
                         />
                       </a>
                     </div>
@@ -95,15 +133,15 @@ function GkvOptions() {
                           {/* Start  */}
                           <div className="infobox-row infobox-row-link">
                             <div className="infobox-row-content">
-                              <a href={props.website}>Website:</a>
+                              <a href={GKV.website}>Website:</a>
                             </div>
                             <div className="infobox-row-content">
                               <a
-                                href={props.website}
+                                href={GKV.website}
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                {props.name}
+                                {GKV.name}
                               </a>
                             </div>
                           </div>
@@ -114,7 +152,7 @@ function GkvOptions() {
                               <p>Zusatzbeitrag:</p>
                             </div>
                             <div className="infobox-row-content">
-                              {props.keywords.additionalContribution}
+                              {GKV.keywords.additionalContribution}
                             </div>
                           </div>
                           {/* Ende  */}
@@ -124,9 +162,9 @@ function GkvOptions() {
                               <p>Benefits:</p>
                             </div>
                             <div className="infobox-row-content">
-                              <li>{props.keywords.benefits[0]}</li>
-                              <li>{props.keywords.benefits[1]}</li>
-                              <li>{props.keywords.benefits[2]}</li>
+                              <li>{GKV.keywords.benefits[0]}</li>
+                              <li>{GKV.keywords.benefits[1]}</li>
+                              <li>{GKV.keywords.benefits[2]}</li>
                             </div>
                           </div>
                           {/* Ende  */}
@@ -137,7 +175,7 @@ function GkvOptions() {
                             </div>
                             <div className="infobox-row-content">
                               <a
-                                href={props.pdfFile}
+                                href={GKV.keywords.pdf}
                                 target="_blank"
                                 rel="noreferrer"
                               >
@@ -151,7 +189,7 @@ function GkvOptions() {
                               <p>Cashback:</p>
                             </div>
                             <div className="infobox-row-content">
-                              {props.chashback}
+                              {GKV.keywords.chashback}
                             </div>
                           </div>
                           {/* Ende  */}
@@ -164,14 +202,27 @@ function GkvOptions() {
             </div>
           </>
         ) : null}
+ {/* end of Modal Bonusprogramme  */}
+ 
       </div>
       <div className="checkbox-div ">
         <div className="request-footer-moreButton">
           <div className="request-footer-moreButton">
-            <button className="btn btn-transparent">Zurück</button>
+            <button className="btn btn-transparent"
+            onClick={()=>{
+              props.sendShowOwn(false)
+              props.sendShowLast(true)
+            }}
+            >Zurück</button>
           </div>
 
-          <button className="btn btn-transparent" disabled={true}>
+          <button className="btn btn-transparent" disabled={disabledButton}
+          onClick={()=>{
+            props.sendCompany(company)
+            props.sendMembership(membership)
+            props.sendShowOwn(false)
+            props.sendShowNext(true)
+            }}>
             Weiter
           </button>
         </div>

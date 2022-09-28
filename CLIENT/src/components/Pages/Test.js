@@ -1,56 +1,37 @@
 import React from "react";
-import { Checkbox } from "@mui/material";
-import { green } from "@mui/material/colors";
-import { red } from "@mui/material/colors";
+
 import { useState, useEffect } from "react";
 
-function Permission(props) {
-  //checkboxes Values
-  const [values, setValues] = useState({
-    checkValue1: false,
-    checkValue2: false,
-    checkValue3: false,
-    checkValue4: false,
-    checkValue5: false,
-  });
+function Permission() {
+  const [factor, setfactor] = useState(2);
+  const [nullify, setNullify] = useState(1);
 
-  // This  will enable/disable the botton
-  const [buttonState, setButtonState] = useState(true);
+  const Price = 10;
+  const Bonus = 15;
+  const finalPrice = Math.max((Price * factor - Bonus) * nullify,0)
 
-  // This  should be the onChange
+  const handleFactor = () => {
+    setfactor(1)
+    validate()
+    console.log('jo')
+  };
 
-  //   const handleClick = () => {
-  //     setValues(!values.checkValue1);
-  //   };
+  const validate = () => {
+    if (finalPrice < 0) {
+      setNullify(0);
+    }
+  };
 
 
 
   //HTML Stuff
   return (
     <>
-      <div className="request-container">
-        <Checkbox
-          sx={{
-            color: red[200],
-            "&.Mui-checked": {
-              color: green[800],
-            },
-          }}
-        
-         
-        />
+      <input type="checkbox" onClick={handleFactor} />
+      
 
-        <Checkbox
-          sx={{
-            color: red[200],
-            "&.Mui-checked": {
-              color: green[800],
-            },
-          }}
-        />
 
-        
-      </div>
+      {finalPrice}
     </>
   );
 }

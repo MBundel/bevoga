@@ -69,20 +69,20 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutUs" element={<AboutUs />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/infos" element={<Infos />} />
-          <Route path="/request" element={<Request />} />
-          <Route path="/impressum" element={<Impressum />} />
-          <Route path="/whatsabu" element={<WhatsaBu />} />
-          <Route path="/test" element={<Test />} />
-          <Route path="/compare" element={<Compare />} />
-          <Route path="/partner" element={<Partner />} />
-          <Route path="/concept" element={<Concept />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/bonus" element={<Bonus />} />
+          <Route path="/"           element={<Home      />} />
+          <Route path="/aboutUs"    element={<AboutUs   />} />
+          <Route path="/contact"    element={<Contact   />} />
+          <Route path="/infos"      element={<Infos     />} />
+          <Route path="/request"    element={<Request   />} />
+          <Route path="/impressum"  element={<Impressum />} />
+          <Route path="/whatsabu"   element={<WhatsaBu  />} />
+          <Route path="/test"       element={<Test      />} />
+          <Route path="/compare"    element={<Compare   />} />
+          <Route path="/partner"    element={<Partner   />} />
+          <Route path="/concept"    element={<Concept   />} />
+          <Route path="/blog"       element={<Blog      />} />
+          <Route path="/privacy"    element={<Privacy   />} />
+          <Route path="/bonus"      element={<Bonus     />} />
         </Routes>
         <ContactNow />
         <Footer />

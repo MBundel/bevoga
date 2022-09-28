@@ -21,9 +21,9 @@ function Footer() {
       <div className="footer-links">
         <Link to="/">Cookies</Link>
       </div>
-      <div className="footer-links">
+      {/* <div className="footer-links">
         <Link to="/test">Test</Link>
-      </div>
+      </div> */}
       
     </div>
   );

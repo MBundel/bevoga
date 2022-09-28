@@ -6,7 +6,7 @@ import { RiQuestionnaireLine } from "react-icons/ri";
 import "../css/MainPages.css";
 import "../css/CalcSlider.css";
 
-//  prepare for handleChange
+  //-------------------------- useEffect -------------------------------
 
 function CalcSlider() {
   const [sumInsured, setSumInsured] = useState(1000);
@@ -20,10 +20,10 @@ function CalcSlider() {
     infoBonusProgram: false,
   });
 
-  // Calc Data
+  // -----------------Calc Data Source ------------------------------
   const priceList = priceCalculationWhiteCollar.priceCalculationWhiteCollar;
 
-  //validation
+  //--------------------validation of input -------------------------
   const validateInput = (e) => {
     if (
       sumInsured < 250001 &&
@@ -58,19 +58,21 @@ function CalcSlider() {
     }
   };
 
-  // handle Change ageInsured and sumInsured
+  // -----------handle Change ageInsured and sumInsured---------
 
+  // handle Sum
   const handleSumChange = (e) => {
     setSumInsured(e.target.value);
     validateInput(e);
     calcIkkPrice(e);
   };
+  // handle Age
   const handleAgeChange = (e) => {
     setAgeInsured(e.target.value);
     validateInput(e);
     calcIkkPrice(e);
   };
-
+// calc Price figure
   const yourPrice =
     (priceList
       .filter((priceList) => priceList.age == ageInsured) // === parseInt()
@@ -102,7 +104,7 @@ function CalcSlider() {
     setValues({ infoBonusProgram: false });
   };
 
-  // update Immeditly
+  // ------------------ useEffect ----------------------
 
   useEffect(() => {
     validateInput();
@@ -110,7 +112,7 @@ function CalcSlider() {
   useEffect(() => {
     calcIkkPrice();
   }, [yourPrice]);
-
+//--------------------------- HTML Code ----------------------------------
   return (
     <>
       <div className="calcSliderBox">

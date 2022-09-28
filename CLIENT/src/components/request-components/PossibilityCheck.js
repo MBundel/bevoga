@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Anzeigepflichtverletzung from '../../documents/Anzeigepflichtverletzung.pdf';
+
+//import Mui
+
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -7,55 +12,136 @@ import FormLabel from "@mui/material/FormLabel";
 import { Checkbox } from "@mui/material";
 import { green } from "@mui/material/colors";
 import { red } from "@mui/material/colors";
-import { blue } from "@mui/material/colors";
 
-function PossibilityCheck() {
-  const [checked, setChecked] = useState({
-    ableStatus: true,
-    unableStatus: "",
-    gesundheitsfrage1: false,
-    gesundheitsfrage2: true,
-    gesundheitsfrage3: true,
-    gesundheitsfrage4: true,
-    gesundheitsfrage5: true,    
+function PossibilityCheck(props) {
+  //init checkboxes +  radios
+
+  //radios
+  const [status, setStatus] = useState("true");
+  const [insurance, setInsurance] = useState("true");
+
+  //checkboxes
+  const [gesundheitsfrage1, setGesundheitsfrage1] = useState(true);
+  const [gesundheitsfrage2, setGesundheitsfrage2] = useState(true);
+  const [gesundheitsfrage3, setGesundheitsfrage3] = useState(true);
+  const [gesundheitsfrage4, setGesundheitsfrage4] = useState(true);
+  const [gesundheitsfrage5, setGesundheitsfrage5] = useState(true);
+
+  const [angabenCheck, setAngabencheck] = useState(false);
+  const [disabeldButton, setButtonState] = useState(true);
+
+  //validate infotext
+
+  const [infoText, setInfotext] = useState(false);
+  const showInfoText = () => {
+    if (
+      status !== "true" ||
+      insurance !== "true" ||
+      gesundheitsfrage1 === false ||
+      gesundheitsfrage2 === false ||
+      gesundheitsfrage3 === false ||
+      gesundheitsfrage4 === false ||
+      gesundheitsfrage5 === false
+    ) {
+      setInfotext(true);
+    } else {
+      setInfotext(false);
+    }
     
-  });
-  const[angabenCheck, setAngabencheck] = useState()
-  const [buttonState, setButtonState] = useState("true");
-
-
-  const handleButtonState = () => {
-    
-    // if (checked.angabenCheck === true) {
-    //   setButtonState(false);
-      
-    // } else {
-    //   setButtonState(true);
-    // }
   };
 
-  const handleChange2 = () =>{
-    setAngabencheck(prevValue => !prevValue)
-    console.log(angabenCheck)
-  }
+  // enable/disable Button
 
-  
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleButtonState = () => {
+    if (
+      status === "true" &&
+      insurance === "true" &&
+      angabenCheck === true &&
+      gesundheitsfrage1 === true &&
+      gesundheitsfrage2 === true &&
+      gesundheitsfrage3 === true &&
+      gesundheitsfrage4 === true &&
+      gesundheitsfrage5 === true
+    ) {
+      setButtonState(false);
+    } else {
+      setButtonState(true);
+    }
+    showInfoText();
+  };
+
+  // long way handleChange of checkboxes
+  const handleChange1 = () => {
+    setGesundheitsfrage1((prevValue) => !prevValue);
+    handleButtonState();
     
-    setChecked((prevState) => {
-      return {
-        ...prevState,        
-        [name]: value
-      };
-    });    
-    console.log(checked.gesundheitsfrage1)
+  };
+  const handleChange2 = () => {
+    setGesundheitsfrage2((prevValue) => !prevValue);
+    handleButtonState();
     
+  };
+  const handleChange3 = () => {
+    setGesundheitsfrage3((prevValue) => !prevValue);
+    handleButtonState();
+    
+  };
+  const handleChange4 = () => {
+    setGesundheitsfrage4((prevValue) => !prevValue);
+    handleButtonState();
+    
+  };
+  const handleChange5 = () => {
+    setGesundheitsfrage5((prevValue) => !prevValue);
+    handleButtonState();
+    
+  };
+  const handleChange6 = () => {
+    setAngabencheck((prevValue) => !prevValue);
+    handleButtonState();
+    
+  };
+  // handle Change short
+  //
+  // const handleChange = (e) => {
+  //   setValues((prevState) => {
+  //     const [name] = e.target
+  //     return{
+  //       ...prevState,
+  //       [name]: !prevState[name]
+
+  //     }})
+  //     handleButtonState()
+  //   }
+
+  // handle change of radio status and insurancy
+  // status radio
+  const handleRadio1 = (e) => {
+    setStatus(e.target.value);
+    handleButtonState();
+    
+  };
+  // insurance radio
+  const handleRadio2 = (e) => {
+    setInsurance(e.target.value);
     handleButtonState();
     
   };
 
- 
+  // --------------------- useEffect -------------------------
+  useEffect(() => {
+    handleButtonState();
+  }, [
+    gesundheitsfrage1,
+    gesundheitsfrage2,
+    gesundheitsfrage3,
+    gesundheitsfrage4,
+    gesundheitsfrage5,
+    angabenCheck,
+    infoText,
+    status,
+    insurance,
+  ]);
 
   return (
     <div>
@@ -63,9 +149,13 @@ function PossibilityCheck() {
       <div className="checkbox-div">
         <FormControl>
           <FormLabel style={{ color: "white" }}>Wie ist dein Status?</FormLabel>
-          <RadioGroup defaultValue="possible">
+          <RadioGroup
+            defaultValue="true"
+            value={status}
+            onChange={handleRadio1}
+          >
             <FormControlLabel
-              value="possible"
+              value="true"
               name="ableStatus"
               control={<Radio style={{ color: "white" }} />}
               label="angetsellt / verbeamtet / selbstständig / auszubildend"
@@ -84,14 +174,18 @@ function PossibilityCheck() {
           <FormLabel style={{ color: "white" }}>
             Wie bist du krankenversichert?
           </FormLabel>
-          <RadioGroup defaultValue="gesetzlich">
+          <RadioGroup
+            defaultValue="true"
+            value={insurance}
+            onChange={handleRadio2}
+          >
             <FormControlLabel
-              value="privat"
+              value="false"
               control={<Radio style={{ color: "white" }} />}
               label="Privat"
             />
             <FormControlLabel
-              value="gesetzlich"
+              value="true"
               control={<Radio style={{ color: "white" }} />}
               label="Gesetzlich"
             />
@@ -106,9 +200,9 @@ function PossibilityCheck() {
           <div>
             <div>
               <Checkbox
-                defaultChecked="checked"
-                onChange={(e) => handleChange(e)}
-                value={checked.gesundheitsfrage1}
+                onChange={(e) => handleChange1(e)}
+                value={gesundheitsfrage1}
+                defaultChecked={true}
                 name="gesundheitsfrage1"
                 inputProps={{ "aria-label": "controlled" }}
                 sx={{
@@ -128,15 +222,13 @@ function PossibilityCheck() {
           <div>
             <div>
               <Checkbox
-                defaultChecked="checked"
-                value={checked.gesundheitsfrage2}
+                value={gesundheitsfrage2}
+                defaultChecked={true}
                 name="gesundheitsfrage2"
-                onChange={handleChange}
+                onChange={handleChange2}
                 sx={{
                   color: red[200],
-                  "&.Mui-checked": {
-                    color: green[800],
-                  },
+                  "&.Mui-checked": { color: green[800] },
                 }}
               />
             </div>
@@ -154,15 +246,13 @@ function PossibilityCheck() {
           <div>
             <div>
               <Checkbox
-                defaultChecked="checked"
-                onChange={handleChange}
-                value={checked.gesundheitsfrage3}
+                onChange={handleChange3}
+                value={gesundheitsfrage3}
+                defaultChecked={true}
                 name="gesundheitsfrage3"
                 sx={{
                   color: red[200],
-                  "&.Mui-checked": {
-                    color: green[800],
-                  },
+                  "&.Mui-checked": { color: green[800] },
                 }}
               />
             </div>
@@ -181,9 +271,9 @@ function PossibilityCheck() {
           <div>
             <div>
               <Checkbox
-                defaultChecked="checked"
-                onChange={handleChange}
-                value={checked.gesundheitsfrage4}
+                onChange={handleChange4}
+                value={gesundheitsfrage4}
+                defaultChecked={true}
                 name="gesundheitsfrage4"
                 sx={{
                   color: red[200],
@@ -208,9 +298,9 @@ function PossibilityCheck() {
           <div>
             <div>
               <Checkbox
-                defaultChecked="checked"
-                onChange={handleChange}
-                value={checked.gesundheitsfrage5}
+                onChange={handleChange5}
+                value={gesundheitsfrage5}
+                defaultChecked={true}
                 name="gesundheitsfrage5"
                 sx={{
                   color: red[200],
@@ -236,8 +326,9 @@ function PossibilityCheck() {
           <div>
             <div>
               <Checkbox
-                onChange={handleChange2}
+                onChange={handleChange6}
                 value={angabenCheck}
+                defaultChecked={false}
                 name="angabenCheck"
                 sx={{
                   color: red[200],
@@ -249,7 +340,18 @@ function PossibilityCheck() {
             </div>
             <div display="flex">
               <p>
-                Ich habe die oben genannten Fragen wahrheitsgemäß beantwortet.
+                Ich habe die oben genannten Fragen wahrheitsgemäß beantwortet
+                und habe die Ich bestätige, dass ich vor der Antragstellung die{" "}
+                <a href={Anzeigepflichtverletzung}  target="_blank" rel="noreferrer" >
+                  {" "}
+                  <span className="underlineLink">
+                    {" "}
+                    „Wichtige Mitteilung über die Folgen einer
+                    Anzeigepflichtverletzung nach § 19 Abs. 5
+                    Versicherungsvertragsgesetz“
+                  </span>
+                </a>{" "}
+                erhalten habe.
               </p>
             </div>
           </div>
@@ -257,15 +359,74 @@ function PossibilityCheck() {
         </div>
       </div>
       <div className="checkbox-div">
-        "Es ist eine indivnameuelle Beratung nötig. Wenn du auf "Bearatung
-        anfordern" klickst, werden wir uns bei dir melden. Sonst klicke auf
-        Kontakt."
+        {infoText ? (
+          <p style={{ color: "#A4303F" }}>
+            {" "}
+            <b> Es ist eine individuelle Beratung nötig!</b>
+          </p>
+        ) : (
+          <>
+            <b>
+              {" "}
+              <br />
+            </b>
+          </>
+        )}
         <div className="request-footer-moreButton">
           <div>
-            <button className="btn btn-transparent">Zurück</button>
+            <button
+              className="btn btn-transparent"
+              onClick={(event) => {
+                event.preventDefault();
+                props.sendShowLast(true);
+                props.sendShowOwn(false);
+              }}
+            >
+              Zurück
+            </button>
           </div>
-          <button className="btn btn-transparent">Beratung anfordern</button>
-          <button className="btn btn-transparent" disabled={buttonState}>
+          <Link to="/contact" target="_blank">
+            {" "}
+            <button
+              className="btn btn-transparent"
+              onClick={() => {
+                props.sendPossibility({
+                  "gesundheitsfragen:": {
+                    gesundheitsfrage1,
+                    gesundheitsfrage2,
+                    gesundheitsfrage3,
+                    gesundheitsfrage4,
+                    gesundheitsfrage5,
+                  },
+                  "angabencheck:": angabenCheck,
+                  status: status,
+                  "Krankenversichert:": insurance,
+                });
+              }}
+            >
+              Beratung anfordern
+            </button>
+          </Link>
+          <button
+            className="btn btn-transparent"
+            disabled={disabeldButton}
+            onClick={() => {
+              props.sendPossibility({
+                "gesundheitsfragen:": {
+                  gesundheitsfrage1,
+                  gesundheitsfrage2,
+                  gesundheitsfrage3,
+                  gesundheitsfrage4,
+                  gesundheitsfrage5,
+                },
+                "angabencheck:": angabenCheck,
+                status: status,
+                "Krankenversichert:": insurance,
+              });
+              props.sendShowNext(true);
+              props.sendShowOwn(false);
+            }}
+          >
             Weiter
           </button>
         </div>

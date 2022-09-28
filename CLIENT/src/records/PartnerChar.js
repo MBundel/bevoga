@@ -51,7 +51,7 @@ export const PartnerChar = [
     img: "../../img/viactiv.png",
     imgAlt: "Logo vom Kooperationspartner",
     title: "Krankenkasse",
-    infoText: ipsum,
+    infoText: "Als Deutschlands sportliche Krankenkasse begleiten wir unsere Versicherten auf dem Weg in ein aktiveres Leben. Denn wir sind uns sicher, dass es sich lohnt, die eigene Gesundheit aktiv in die Hand zu nehmen. Mit unseren Angeboten gestalten Sie Ihren Alltag ganz einfach gesünder. Dabei halten wir Ihnen stets den Rücken frei – mit einem Rundum-Service, der mehrfach ausgezeichnet wurde. Wir versichern bereits rund 720.000 zufriedene Kunden und machen unsere Arbeit aus Überzeugung. Lassen auch Sie sich überzeugen!",
     keywords: {
       website: "https://viactiv.de",
       additionalContribution: "1,6%",
