@@ -158,7 +158,7 @@ function PossibilityCheck(props) {
               value="true"
               name="ableStatus"
               control={<Radio style={{ color: "white" }} />}
-              label="angetsellt / verbeamtet / selbstständig / auszubildend"
+              label="angetsellt / verbeamtet / auszubildend"
             />
             <FormControlLabel
               value="false"
@@ -341,7 +341,7 @@ function PossibilityCheck(props) {
             <div display="flex">
               <p>
                 Ich habe die oben genannten Fragen wahrheitsgemäß beantwortet
-                und habe die Ich bestätige, dass ich vor der Antragstellung die{" "}
+                und bestätige, dass ich vor der Antragstellung die{" "}
                 <a href={Anzeigepflichtverletzung}  target="_blank" rel="noreferrer" >
                   {" "}
                   <span className="underlineLink">
@@ -351,7 +351,7 @@ function PossibilityCheck(props) {
                     Versicherungsvertragsgesetz“
                   </span>
                 </a>{" "}
-                erhalten habe.
+                gelesen habe.
               </p>
             </div>
           </div>

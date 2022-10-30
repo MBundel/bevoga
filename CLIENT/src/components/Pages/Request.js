@@ -56,34 +56,35 @@ export default function Request() {
     await addDoc(usersCollectionRef, {
       formForRequestData: formForRequestData,
       whatsappPermission: newsletterWA,
-      emailPermission: newsletterMail,
-      insurable: possibility,
-      membership: membership,
-      company: company,
-      insuredSum: insuredSum,
-      bruttoIncome: brutto,
-      FinalPrice: price,
-      whiteCollar: whiteCollar,
-      personalInfos: personalInfos,
-      personalData: personalData,
-      personalData2: personalData2,
-      necessaryApproval: necessaryApproval
+      emailPermission:    newsletterMail,
+      insurable:          possibility,
+      membership:         membership,
+      company:            company,
+      insuredSum:         insuredSum,
+      bruttoIncome:       brutto,
+      FinalPrice:         price,
+      whiteCollar:        whiteCollar,
+      personalInfos:      personalInfos,
+      personalData:       personalData,
+      personalData2:      personalData2,
+      necessaryApproval:  necessaryApproval
      
     });
   };
 
  // --------------- show and hide forms -----------
-  const [showBuSumCalculator, setShowBuSumCalculator]         = useState(true)
-  const [showFormForRequest, setShowFormForRequest]           = useState(false)
+  const [showBuSumCalculator, setShowBuSumCalculator]         = useState(false)
+  const [showFormForRequest, setShowFormForRequest]           = useState(true)
   const [showGkvOptions, setShowGkvOptions]                   = useState(false)
   const [showNecessaryApproval, setShowNecessaryApproval]     = useState(false)
+  const [showPermission, setShowPermission]                   = useState(false)
   const [showPersonalData, setShowPersonalData]               = useState(false)
   const [showPersonalData2, setShowPersonalData2]             = useState(false)
   const [showPersonalInformation, setShowPersonalInformation] = useState(false)
   const [showPossibilityCheck, setShowPossibilityCheck]       = useState(false)
   const [showResult, setShowResult]                           = useState(false)
   const [showSubmit, setShowSubmit]                           = useState(false)
-  const [showPermission, setShowPermission]                   = useState(false)
+  
  
   
 
@@ -115,68 +116,71 @@ export default function Request() {
           sendShowOwn  =  {showFormForRequest     => setShowFormForRequest     (showFormForRequest)}
           sendShowNext =  {showPossibilityCheck   => setShowPossibilityCheck   (showPossibilityCheck)}
           sendData     =  {FormForRequestData     => setFormForRequestData     (FormForRequestData)}       
-        />):null}
+        />):null} 
 
         {/* ------------------------------------------------------------------------- */}
 
         {showPossibilityCheck ? (  <PossibilityCheck
-          sendShowLast   = {showFormForRequest    => setShowFormForRequest      (showFormForRequest)}
-          sendShowOwn    = {showPossibilityCheck  => setShowPossibilityCheck    (showPossibilityCheck)}
-          sendShowNext   = {showNecessaryApproval => setShowNecessaryApproval   (showNecessaryApproval)}
-          sendPossibility= {possibility           => setPossibility             (possibility)}
+          sendShowLast   = {showFormForRequest    => setShowFormForRequest     (showFormForRequest)}
+          sendShowOwn    = {showPossibilityCheck  => setShowPossibilityCheck   (showPossibilityCheck)}
+          sendShowNext   = {showNecessaryApproval => setShowNecessaryApproval  (showNecessaryApproval)}
+          sendPossibility= {possibility           => setPossibility            (possibility)}
           
         />):null}
 
         {/* ------------------------------------------------------------------------- */}
+
          {showNecessaryApproval ? (<NecessaryApproval
-          sendShowLast= {showPossibilityCheck    => setShowPossibilityCheck     (showPossibilityCheck)}
-          sendShowOwn = {showNecessaryApproval   => setShowNecessaryApproval    (showNecessaryApproval)}
-          sendShowNext= {showGkvOptions          => setShowGkvOptions           (showGkvOptions)}
-          sendData    = {necessaryApproval       => setNecessaryApproval        (necessaryApproval)}
-         />):null}    
-       
-        {/* ------------------------------------------------------------------------- */}
-         
-        {showGkvOptions  ? (             <GkvOptions
-          sendShowLast  ={showNecessaryApproval   => setShowNecessaryApproval  (showNecessaryApproval)}
-          sendShowOwn   ={showGkvOptions          => setShowGkvOptions         (showGkvOptions)}
-          sendShowNext  ={showBuSumCalculator     => setShowBuSumCalculator    (showBuSumCalculator)}
-          sendMembership={membership              => setMembership             (membership)}
-          sendCompany   ={company                 => setCompany                (company)}
-        />): null}
+          sendShowLast= {showPossibilityCheck    => setShowPossibilityCheck    (showPossibilityCheck)}
+          sendShowOwn = {showNecessaryApproval   => setShowNecessaryApproval   (showNecessaryApproval)}
+          sendShowNext= {showBuSumCalculator     => setShowBuSumCalculator     (showBuSumCalculator)}
+          sendData    = {necessaryApproval       => setNecessaryApproval       (necessaryApproval)}
+         />):null}  
 
          {/* ------------------------------------------------------------------------- */}  
 
         {showBuSumCalculator ? (    <BuSumCalculator
-          sendShowLast  = {showGkvOptions         => setShowGkvOptions         (showGkvOptions)}
+          sendShowLast  = {showNecessaryApproval  => setShowNecessaryApproval  (showNecessaryApproval)}
           sendShowOwn   = {showBuSumCalculator    => setShowBuSumCalculator    (showBuSumCalculator)}
-          sendShowNext  = {showPersonalInformation=> setShowPersonalInformation(showPersonalInformation)}
+          sendShowNext  = {showGkvOptions         => setShowGkvOptions         (showGkvOptions)}
           sendBrutto    = {brutto                 => setBrutto                 (brutto)}
           sendInsuredSum= {insuredSum             => setInsuredSum             (insuredSum)}
           sendPrice     = {price                  => setPrice                  (price)}
           sendCollar    = {whiteCollar            => setWhiteCollar            (whiteCollar)}        
         />): null}
-          
-         {/* ------------------------------------------------------------------------- */}  
-   
-        {showPersonalInformation? (<PeronlalInformation
-          sendShowLast=  {showBuSumCalculator     => setShowBuSumCalculator    (showBuSumCalculator)}
-          sendShowOwn =  {showPersonalInformation => setShowPersonalInformation(showPersonalInformation)}
-          sendShowNext=  {showPersonalData        => setShowPersonalData       (showPersonalData)}
-          sendData    =  {personalInfos           => setPersonalInfos          (personalInfos)}
-        />): null}  
 
+          {/* ------------------------------------------------------------------------- */}
+         
+        {showGkvOptions  ? (             <GkvOptions
+          sendShowLast  ={showBuSumCalculator     => setShowBuSumCalculator    (showBuSumCalculator)}
+          sendShowOwn   ={showGkvOptions          => setShowGkvOptions         (showGkvOptions)}
+          sendShowNext  ={showPersonalData        => setShowPersonalData       (showPersonalData)}
+          sendMembership={membership              => setMembership             (membership)}
+          sendCompany   ={company                 => setCompany                (company)}
+        />): null} 
+        
          {/* ------------------------------------------------------------------------- */}  
         {showPersonalData?(           <PersonalData
-          sendShowLast= {showPersonalInformation  => setShowPersonalInformation(showPersonalInformation)}
+          sendShowLast= {showGkvOptions           => setShowGkvOptions         (showGkvOptions)}
           sendShowOwn = {showPersonalData         => setShowPersonalData       (showPersonalData)}
-          sendShowNext= {showPersonalData2        => setShowPersonalData2      (showPersonalData2)}
+          sendShowNext= {showPersonalInformation  => setShowPersonalInformation(showPersonalInformation)}
           sendData    = {personalData             => setPersonalData           (personalData)}
         />):null}
 
          {/* ------------------------------------------------------------------------- */}  
+   
+        {showPersonalInformation? (<PeronlalInformation
+          sendShowLast= {showPersonalData         => setShowPersonalData       (showPersonalData)}
+          sendShowOwn = {showPersonalInformation  => setShowPersonalInformation(showPersonalInformation)}
+          sendShowNext= {showPersonalData2        => setShowPersonalData2      (showPersonalData2)}
+          sendData    = {personalInfos            => setPersonalInfos          (personalInfos)}
+        />): null}  
+
+       
+
+         {/* ------------------------------------------------------------------------- */}  
         {showPersonalData2?(         <PersonalData2
-         sendShowLast=  {showPersonalData         => setShowPersonalData       (showPersonalData)}
+         sendShowLast=  {showPersonalInformation => setShowPersonalInformation (showPersonalInformation)}
          sendShowOwn =  {showPersonalData2        => setShowPersonalData2      (showPersonalData2)}
          sendShowNext=  {showSubmit               => setShowSubmit             (showSubmit)}
          sendData    =  {personalData2            => setPersonalData2          (personalData2)}
@@ -184,7 +188,7 @@ export default function Request() {
 
          {/* ------------------------------------------------------------------------- */}  
            {showSubmit ?( 
-            <> Hiermit möchte ich mir ein Angebot zukommen lassen. 
+            <> Hiermit möchte ich mir ein Angebot und die Vertragsunterlagen zukommen lassen. 
              <div className="checkbox-div">
              <div className="request-footer-moreButton">
                <div>

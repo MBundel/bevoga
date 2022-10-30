@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./css/Infocards.css";
 
 import { GoInfo } from "react-icons/go";
-import { MdUnfoldMore } from "react-icons/md";
+// import { MdUnfoldMore } from "react-icons/md";
 import { MdConnectWithoutContact } from "react-icons/md";
 import { TbFileCertificate } from "react-icons/tb";
 import { SiWhatsapp } from "react-icons/si";
@@ -17,8 +17,6 @@ function Infocards(props) {
   const [textLong, settextLong] = useState(props.infoTextDefault);
 
   const [show, setShow] = useState(false);
-
-
 
   function textOne() {
     setText(props.infoTextOneShort);
@@ -61,34 +59,46 @@ function Infocards(props) {
           <br />
           <tr>
             <td>
-              <a href="mailto:info@bevoga.de">
+              <a target="_blank" rel="noreferrer" href="mailto:info@bevoga.de">
                 <HiMail className="icon" size={20} />
               </a>
             </td>
             <td>
-              <a href="mailto:info@bevoga.de">info@bevoga.de</a>
+              <a target="_blank" rel="noreferrer" href="mailto:info@bevoga.de">
+                info@bevoga.de
+              </a>
             </td>
           </tr>
           <br />
           <tr>
             <td>
-              <a href="tel:+4944121213023">
+              <a target="_blank" rel="noreferrer" href="tel:+4944121213023">
                 <IoMdPhonePortrait className="icon" size={20} />
               </a>
             </td>
             <td>
-              <a href="tel:+4944121213023">0441- 21 21 30 23</a>
+              <a target="_blank" rel="noreferrer" href="tel:+4944121213023">
+                0441- 21 21 30 23
+              </a>
             </td>
           </tr>
           <br />
           <tr>
             <td>
-              <a href="https://www.termininfo.net/fimdeu/berufsunfaehigkeitsversicherung">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.termininfo.net/fimdeu/bevoga"
+              >
                 <MdCameraFront className="icon" size={20} />
               </a>
             </td>
             <td>
-              <a href="https://www.termininfo.net/fimdeu/berufsunfaehigkeitsversicherung">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.termininfo.net/fimdeu/bevoga"
+              >
                 Online-Termin
               </a>
             </td>
@@ -192,7 +202,7 @@ function Infocards(props) {
                     <p> {props.sectionThree}</p>
                   </td>
                 </tr>
-                <tr
+                {/* <tr
                   onClick={() => {
                     setShow(true);
                   }}
@@ -203,7 +213,7 @@ function Infocards(props) {
                   <td className="infocard-table">
                     <p>MEHR INFOS</p>
                   </td>
-                </tr>
+                </tr> */}
                 <tr
                   onClick={() => {
                     setShow(false);

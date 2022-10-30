@@ -11,6 +11,7 @@ function GkvOptions(props) {
   // Modal
   const GKV = partnerChar.PartnerChar;
   const [showModal, setShowModal] = useState(false);
+  const [showExchange, setShowExchange] = useState(false)
 
  
 // radio1, membership
@@ -19,6 +20,7 @@ const[membership, setMembership] = useState("")
 const handleRadio1 = (e) =>{
   setMembership(e.target.value)
   handleButtonState()  
+ 
   
 }
 
@@ -40,8 +42,17 @@ const [disabledButton, setButtonState] = useState(true);
 // handle buttonState
 
 const handleButtonState = () => {    
-  if (membership  && company) {
+  if ((membership  && company) ||( membership === "member")) {
     setButtonState(false);
+  }
+  else{
+    setButtonState(true);
+  }
+
+  if(membership === "exchange"){
+    setShowExchange(true)
+  }else {
+    setShowExchange(false)
   }
   
 };
@@ -49,7 +60,10 @@ const handleButtonState = () => {
 
 useEffect(() => {
   handleButtonState();
+
 }, [company, membership]);
+
+
 
 //-------------------HTML CODE ----------------------
   return (
@@ -58,26 +72,28 @@ useEffect(() => {
       <div className="checkbox-div">
         <FormControl>
           {" "}
-          Für den Antrag musst du Mitgleid einer der unten genannten
-          Krankenkassen sein.
-          <FormLabel  style={{ color: "white" }}>Dein Status</FormLabel>
+          Für den Antrag musst du Mitgleid folgender Krankenkassen sein:
+          IKK Innovationskasse, VIACTIV, Knappschaft <br />
+
+          <FormLabel  style={{ color: "white" }}>Bist du Mitglied einer der Krankenkassen?</FormLabel>
           <RadioGroup value={membership} onChange={handleRadio1}>
             <FormControlLabel
               value="exchange"
               control={<Radio style={{ color: "white" }} />}
-              label="Wechsel gewünscht"
+              label="Nein, Wechsel gewünscht"
             />
             <FormControlLabel
               value="member"
               control={<Radio style={{ color: "white" }} />}
-              label="bereits Mitglied"
+              label="Ja, bereits Mitglied"
             />
           </RadioGroup>
         </FormControl>
-
+  {showExchange ? ( <> 
         <FormControl>
           <FormLabel style={{ color: "white" }} >
-            Wo bist du krankenversichert?
+         
+            Zu welcher Krankenkasse möchtest du wechseln?
           </FormLabel>
           <RadioGroup value={company} onChange={handleRadio2}>
             <FormControlLabel
@@ -88,7 +104,7 @@ useEffect(() => {
             <FormControlLabel
               value="viaktiv"
               control={<Radio style={{ color: "white" }} />}
-              label="VIAKTIV "
+              label="VIACTIV "
             />
             <FormControlLabel
               value="knappschaft"
@@ -97,7 +113,7 @@ useEffect(() => {
             />
           </RadioGroup>
         </FormControl>
-
+        </>): null }
         <div
           className="modal-box"
           onClick={() => setShowModal((prevValue) => !prevValue)}
@@ -201,10 +217,11 @@ useEffect(() => {
                 ))}
             </div>
           </>
-        ) : null}
+           ) : null}
  {/* end of Modal Bonusprogramme  */}
- 
+
       </div>
+      
       <div className="checkbox-div ">
         <div className="request-footer-moreButton">
           <div className="request-footer-moreButton">

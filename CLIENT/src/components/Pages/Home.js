@@ -44,6 +44,8 @@ function Home() {
      ))}
      <CalcSlider/>
      <div className="importantBox">
+      <h2>SICHERE DICH JETZT AB!</h2>
+      <br />
       <div className="centeredContent">
       <Button
                 path="/request"

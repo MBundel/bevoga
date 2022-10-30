@@ -53,7 +53,6 @@ const handleButton = () => {
      && values.postalCode !== ""
      && values.city !== ""
      && values.sex !== ""
-     && values.birthName !== ""
      && values.birthPlace !== ""
      && values.birthday !== ""
      && values.country !== ""

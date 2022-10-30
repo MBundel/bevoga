@@ -83,7 +83,7 @@ function NecessaryApproval(props) {
                   Erstprämie oder Einmalprämie
                 </span>
               </a>
-              &nbsp; erhalten zu haben.
+              &nbsp;  zur Kenntniss genommen habe.
             </p>
           </div>
         </div>
@@ -113,7 +113,7 @@ function NecessaryApproval(props) {
                   sowie die Beitragsübersicht
                 </span>
               </a>{" "}
-              erhalten habe.
+              zur Kenntniss genommen habe.
             </p>
           </div>
         </div>
@@ -140,7 +140,7 @@ function NecessaryApproval(props) {
                 rel="noreferrer"
               >
                 <span className="underlineLink">
-                  Einwilligung in die Verwendung von der Schweigepflicht
+                  Einwilligungen der Verwendung von der Schweigepflicht
                   geschützter Daten und Schweigepflichtentbindung
                 </span>
               </a>{" "}

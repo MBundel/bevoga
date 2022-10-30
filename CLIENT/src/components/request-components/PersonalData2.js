@@ -75,9 +75,10 @@ const handleType = () => {
             placeholder=" Bankname "
           />
         </div>
-        <div className="checkbox-div">
+ {/* ------------------- CheckBox DIV -----------------------------   */}
+        {/* <div className="checkbox-div"> */}
           {/* ----------- CheckBox -----------------   */}
-        <div>
+        {/* <div>
             <div>
                 <Checkbox
                   sx={{
@@ -94,9 +95,9 @@ const handleType = () => {
                   Ich willige ein, dass die Krankenkasse mich kontaktieren darf.
                 </p>
               </div>
-            </div>
+            </div> */}
           {/* ----------- CheckBox -----------------   */}
-        <div>
+        {/* <div>
             <div>
                 <Checkbox
                   sx={{
@@ -113,9 +114,9 @@ const handleType = () => {
                 Kenntnisnahme: Die Erhebung der persönlichen Daten ist aufgrund der §§ 206 und 284 Sozialgesetzbuch Fünftes Buch (SGB V) in Verbindung mit § 21 SGB Zehntes Buch (SGB X) zur rechtmäßigen Erfüllung unserer Aufgaben erforderlich. Der Schutz der Sozialdaten nach den Vorschriften des SGB X sowie der DS-GVO (Datenschutzgrundverordnung) ist gewährleistet.
                 </p>
               </div>
-            </div>
+            </div> */}
           {/* ----------- CheckBox -----------------   */}
-        <div>
+        {/* <div>
             <div>
                 <Checkbox
                   sx={{
@@ -133,9 +134,7 @@ const handleType = () => {
                 </p>
               </div>
             </div>
-
-          
-        </div>
+        </div> */}
       </form>
       {/* -------------------- Footer -------------------- */}
       <div className="checkbox-div ">
@@ -146,7 +145,7 @@ const handleType = () => {
               className="btn btn-transparent"
               onClick={() => {
                 props.sendShowLast(true);
-                props.sendShoWOwnn(false);
+                props.sendShowOwn(false);
               }}
             >
               Zurück
@@ -158,7 +157,7 @@ const handleType = () => {
             disabled={disabeld}
             onClick={() => {
               props.sendShowNext(true);
-              props.sendShoWOwnn(false);
+              props.sendShowOwn(false);
               props.sendData(values);
             }}
           >

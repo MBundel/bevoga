@@ -38,7 +38,6 @@ const handleButton = () => {
      && values.postalCode !== ""
      && values.city !== ""
      && values.sex !== ""
-     && values.birthName !== ""
      && values.birthPlace !== ""
      && values.birthday !== ""
      && values.country !== ""
@@ -55,7 +54,7 @@ const handleButton = () => {
 
   return (
     <div>
-      Informationen für die Krankenkasse
+      Informationen für die Krankenkasse <span className="important">nur bei Wechsel ausfüllen!</span>
       <form action="">
         <div className="checkbox-div">
           <select value={values.employment} onChange={handleChange} name="employment">

@@ -36,9 +36,18 @@ function BuSumCalculator(props) {
   // --------------------- handle validation of input ----------------------
   //validation of sum and age
   const validateInput = (e) => {
-    if (sumInsured > (monthlyIncome - exBu) * 0.75) {
-      setSumInsured((monthlyIncome - exBu) * 0.75);
+    if (
+      sumInsured > monthlyIncome * 0.75 - exBu &&
+      monthlyIncome * 0.75 - exBu > 0
+    ) {
+      setSumInsured(monthlyIncome * 0.75 - exBu);
+    } else if (
+      sumInsured > monthlyIncome * 0.75 - exBu &&
+      monthlyIncome * 0.75 - exBu < 0
+    ) {
+      setSumInsured(0);
     }
+
     if (ageInsured > 67) {
       setAgeInsured(67);
     }
@@ -120,7 +129,7 @@ function BuSumCalculator(props) {
   };
   // handle maxOnClick
   const getMaxInsuredSum = () => {
-    setSumInsured(monthlyIncome* 0.75 - exBu );
+    setSumInsured(monthlyIncome * 0.75 - exBu);
   };
 
   //-------------------------- calculation formulars -------------------------------
@@ -146,12 +155,9 @@ function BuSumCalculator(props) {
   // calculation of ikk Bonus
   const getIkkPrice = () => {
     if (ikkCheckbox === true) {
-      if (listPrice * sumInsured * collarFactor - 500 / 12 < 0) {
-      } else {
-        setIkkBonus(41.66);
-      }
-    } else {
-      setIkkBonus(0);
+      setIkkBonus(41.66);
+    }else{
+      setIkkBonus(0)
     }
   };
 
@@ -249,7 +255,7 @@ function BuSumCalculator(props) {
           MTL. ABSICHERUNGSSUMME{" "}
           <span className="clickable" onClick={getMaxInsuredSum}>
             {" "}
-            (max: {(monthlyIncome* 0.75 - exBu ).toFixed(0)} )
+            (max: {(monthlyIncome * 0.75 - exBu).toFixed(0)} )
           </span>
         </p>
         <input
@@ -266,7 +272,7 @@ function BuSumCalculator(props) {
         <input
           type="range"
           min={monthlyIncome * 0.075}
-          max={monthlyIncome* 0.75 - exBu }
+          max={monthlyIncome * 0.75 - exBu}
           step={100}
           value={sumInsured}
           onChange={(e) => {
@@ -293,7 +299,7 @@ function BuSumCalculator(props) {
                 onChange={handleChangeIkkBonus}
               />
             }
-            label="IKK Bonusprogramm einberechnen"
+            label=" 500€ vom Bonusprogramm der IKK-Innovationskasse einberechnen"
           />
         </FormGroup>
       </div>
@@ -323,7 +329,7 @@ function BuSumCalculator(props) {
               className="btn btn-transparent"
               onClick={() => {
                 props.sendShowLast(true);
-                props.sendShowown(false);
+                props.sendShowOwn(false);
               }}
             >
               Zurück
