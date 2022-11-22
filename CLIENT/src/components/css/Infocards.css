@@ -47,7 +47,7 @@
 .infocard-body >div{
     margin-left: .3rem;
     margin-right: .3rem;
-    display: flex;
+    /* display: flex; */
 }
 
 .infocard-body-link{
@@ -150,12 +150,14 @@
     .infocard-body-link > table >  tr > td > p{
         
         font-size: 0;
+        display: none;
     }
-    .infocard-body-link > table >  tr > td> a > p{
+    .infocard-body-link > table > tbody > tr > td> a > p{
         
         font-size: 0;
+        display: none;
     }
-    .infocard-body-link > table > tr > td >*{
+    .infocard-body-link > table  > tbody> tr > td >*{
         margin-top: 12px;
         margin-bottom: 12px;
         transform: scale(1.8);        
@@ -196,6 +198,16 @@
         text-align: center;
         font-family: sans-serif;
         font-size: .6rem;
+    }
+    .infocard-table > p {
+        font-size: 0;
+        cursor: pointer;
+       
+    }
+    .infocard-table > a {
+        font-size: 0;
+        cursor: pointer;
+        
     }
     
 

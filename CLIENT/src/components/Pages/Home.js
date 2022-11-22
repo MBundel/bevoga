@@ -6,6 +6,7 @@ import Infocards from "../Infocards";
 import CalcSlider from "../request-components/CalcSlider.js";
 
 import { Button } from "../Button.js";
+import {Helmet} from 'react-helmet-async'
 
 
 
@@ -22,6 +23,12 @@ function Home() {
   
   return (
     <>
+    <Helmet>
+      <title>bevoga - die BU für jeden</title>
+      <meta name="description" content="Berufsunfähigkeitsversicherung ohne Gesundheitsfragen"/> 
+      <link rel="canonical" href="/home" />
+      <meta name="keywords" conent="Berufsunfähigkeitsversicherung ohne Gesundheitsfragen, Bu ohne Gesundheitsprüfung, Bu günstig" />
+    </Helmet>
       <HeroSection />
       {infocardOne.map((infocardOne) => (
       <Infocards
@@ -37,6 +44,9 @@ function Home() {
       infoTextOneShort= {infocardOne.infoTextOneShort}
       infoTextTwoShort={infocardOne.infoTextTwoShort}
       infoTextThreeShort={infocardOne.infoTextThreeShort}
+      h2one ={infocardOne.h2one}
+      h2two ={infocardOne.h2two}
+      h2three ={infocardOne.h2three}
    
       />
      ))}

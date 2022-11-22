@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Helmet} from 'react-helmet-async'
 import { Button } from "../Button";
 
 import "../css/MainPages.css";
@@ -8,6 +8,12 @@ import "../css/Cards.css";
 function Bonus() {
   return (
     <div>
+        
+     <Helmet>
+      <title>Konzept</title>
+      <meta name="description" content="Wie eine Bu ohne Gesundheitsfragen auskommt"/> 
+      <link rel="canonical " href="/Bonus" />
+    </Helmet>
       <img
         src="./img/conzept.jpg"
         alt="fragezeichen"

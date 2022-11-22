@@ -70,3 +70,23 @@
     color: #fff;
 }
 
+@media (max-width: 700px) {
+    
+    .btn-middle {    
+        margin-top: 10px;
+        width: 70%; 
+        margin-bottom: 10px;  
+    }
+    .btn-large {    
+        margin-top: 10px;
+        width: 70%; 
+        margin-bottom: 10px;  
+    }
+    
+    
+    .btn-small {    
+        margin-top: 10px;
+        width: 70%; 
+        margin-bottom: 10px;  
+    }
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {Helmet} from 'react-helmet-async'
 
 import "../css/MainPages.css";
 import "../css/Icons.css";
@@ -81,6 +81,13 @@ export default function Contact() {
 
   return (
     <div>
+        
+     <Helmet>
+      <title>Kontakt </title>
+      <meta name="description" content="Melde dich bei uns, wenn du Fragen hast!"/> 
+      <link rel="canonical" href="/contact" />
+      <meta name="keywords" conent="Berufsunfähigkeitsversicherung ohne Gesundheitsfragen, Kontakt, Mail, Whatsapp, Hotline, Termin " />
+    </Helmet>
       <img
         className="background-img"
         src="./img/kontakt.jpg"

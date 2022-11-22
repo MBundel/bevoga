@@ -1,5 +1,6 @@
 import React from "react";
 import Team from "../Team";
+import {Helmet} from 'react-helmet-async'
 
 import * as TeamMembers from "../../records/TeamMembers.js";
 
@@ -11,6 +12,12 @@ const characteristics = TeamMembers.TeamMembers;
 function AboutUs() {
   return (
     <div>
+        
+     <Helmet>
+      <title>Team </title>
+      <meta name="description" content="über uns"/> 
+      <link rel="canonical" href="/aboutus" />
+    </Helmet>
        <img src="./img/team.jpg" alt="fragezeichen" className="background-img" />
       <div className="space"></div>
         {characteristics.map((characteristics) => (

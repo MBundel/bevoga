@@ -13,22 +13,22 @@ import { HiMail } from "react-icons/hi";
 import { IoMdPhonePortrait } from "react-icons/io";
 
 function Infocards(props) {
-  const [text, setText] = useState(props.infoTextDefault);
- 
+  const [text, setText] = useState(props.infoTextOneShort);
+  const [header, setHeader] = useState(props.h2one);
 
   const [show, setShow] = useState(false);
 
   function textOne() {
     setText(props.infoTextOneShort);
-   
+    setHeader(props.h2one);
   }
   function textTwo() {
     setText(props.infoTextTwoShort);
-   
+    setHeader(props.h2two);
   }
   function textThree() {
     setText(props.infoTextThreeShort);
-  
+    setHeader(props.h2three);
   }
   function textToContact() {
     setText(
@@ -107,15 +107,13 @@ function Infocards(props) {
         </tbody>
       </>
     );
-   
-  
   }
-
+  // -------------- HTML CODE --------------------
   return (
     <div className="infocard-backround">
       <div className="infocard">
         <div className="infocard-header">
-          <h1>{props.header}</h1>
+          <h2>{props.header}</h2>
         </div>
         <div className="infocard-section">
           <div
@@ -157,9 +155,8 @@ function Infocards(props) {
         </div>
         <div className="infocard-body">
           <div>
-            <p>
-              {!show ? text : null} 
-            </p>
+            <h2> {!show ? header : null} </h2> <br />
+            <p>{!show ? text : null}</p>
           </div>
           <div className="infocard-body-link">
             <table>
@@ -203,18 +200,6 @@ function Infocards(props) {
                     <p> {props.sectionThree}</p>
                   </td>
                 </tr>
-                {/* <tr
-                  onClick={() => {
-                    setShow(true);
-                  }}
-                >
-                  <td className="infocard-table">
-                    <MdUnfoldMore size={20} />
-                  </td>
-                  <td className="infocard-table">
-                    <p>MEHR INFOS</p>
-                  </td>
-                </tr> */}
                 <tr
                   onClick={() => {
                     setShow(false);

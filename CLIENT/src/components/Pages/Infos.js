@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 import Musterpolice from "../../documents/Musterpolice.pdf";
 import Erstinformation from "../../documents/erstinformation.pdf";
@@ -18,13 +19,116 @@ import { GiReceiveMoney } from "react-icons/gi";
 import { FaFileContract } from "react-icons/fa";
 import { ImNewspaper } from "react-icons/im";
 import { RiPsychotherapyFill } from "react-icons/ri";
-
+import { BsCardChecklist } from "react-icons/bs";
+import { FaMoneyBillWave } from "react-icons/fa";
+import { GoChecklist } from "react-icons/go";
+import { MdSick } from "react-icons/md";
 
 export default function Infos() {
-  
+  const infocardData = [
+    {
+      id: 1,
+      icon: <GoInfo size={100} />,
+      link: "/whatsabu",
+      text: "Alles über BU",
+    },
+    {
+      id: 2,
+      icon: <MdCompare size={100} />,
+      link: "/compare",
+      text: "bevoga VS Standard",
+    },
+    {
+      id: 3,
+      icon: <TbBulb size={100} />,
+      link: "/concept",
+      text: "wie funktioniert bevoga",
+    },
+    {
+      id: 4,
+      icon: <RiTeamLine size={100} />,
+      link: "/partner",
+      text: "Partner",
+    },
+    {
+      id: 5,
+      icon: <BsPersonBoundingBox size={100} />,
+      link: "/aboutus",
+      text: "Wer wir sind",
+    },
+    {
+      id: 6,
+      icon: <GiReceiveMoney size={100} />,
+      link: "/bonus",
+      text: "Bonusprogramm",
+    },
+    {
+      id: 7,
+      icon: <ImNewspaper size={100} />,
+      link: "/blog",
+      text: "Blog",
+    },
+    {
+      id: 8,
+      icon: <RiPsychotherapyFill size={100} />,
+      link: "/Psyche",
+      text: "Bu und Psyche",
+    },
+    {
+      id: 9,
+      icon: <BsCardChecklist size={100} />,
+      link: "/BuOhneGesundheitsfragen",
+      text: "Bu ohne Ges.-Fragen",
+    },
+    {
+      id: 10,
+      icon: <FaMoneyBillWave size={100} />,
+      link: "/GuenstigeBU",
+      text: "niedriger Beitrag",
+    },
+    {
+      id: 11,
+      icon: <GoChecklist size={100} />,      
+      link: "/ProBevoga",
+      text: "9 gute Gründe für uns ",
+    },
+    {
+      id: 12,
+      icon: <MdSick size={100} />,      
+      link: "/chronischeKrankheiten",
+      text: "chronische Krankheiten ",
+    },
+    // hier über einfügen
+    {
+      id: 901,
+      icon: <FaFileContract size={100} />,
+      link: {Musterpolice},
+      text: "Musterpolice",
+    },
+    {
+      id: 902,
+      icon: <FaFileContract size={100} />,
+      link: {Erstinformation},
+      text: "Erstinformation",
+    },
+    {
+      id: 903,
+      icon: <FaFileContract size={100} />,
+      link: {Policeninfoblatt},
+      text: "Policeninfoblatt",
+    },
+  ];
 
   return (
     <>
+      <Helmet>
+        <title>Alles über Berufsunfähigkeitsversicherung </title>
+        <meta
+          name="description"
+          content="Bibliothek unserer bevoga-Absicherung"
+        />
+        <link rel="canonical" href="/infos" />
+      </Helmet>
       <div className="infoBackground">
         <img
           src="./img/fragen.jpg"
@@ -33,129 +137,16 @@ export default function Infos() {
         />
         <div className="space"></div>
         <div className="contentInfoDiv">
+          {/* --------- MAP-CARD -------------- */}
+          {infocardData.map((infocardData) => (
+            <Link to={infocardData.link}>
+              <div className="icon-card">
+                <div className="icon-card-icon">{infocardData.icon}</div>
+                <div className="icon-card-text"> {infocardData.text}</div>
+              </div>
+            </Link>
+          ))}
 
-          {/* --------- CARD -------------- */}
-
-          <Link to="/whatsabu">
-            <div className="icon-card">
-              <div className="icon-card-icon">
-                <GoInfo size={100} />
-              </div>
-              <div className="icon-card-text"> Alles über BU </div>
-            </div>
-          </Link>
-
-          {/* --------- CARD -------------- */}
-
-          <Link to="/compare">
-            <div className="icon-card">
-              <div className="icon-card-icon">
-                <MdCompare size={100} />
-              </div>
-              <div className="icon-card-text"> bevoga vs Standard </div>
-            </div>
-          </Link>
-
-          {/* --------- CARD -------------- */}
-          
-          <Link to="/concept">
-            <div className="icon-card">
-              <div className="icon-card-icon">
-                <TbBulb size={100} />
-              </div>
-              <div className="icon-card-text"> wie funktioniert bevoga</div>
-            </div>
-          </Link>
-          
-          {/* --------- CARD -------------- */}
-          
-          <Link to="/partner">
-            <div className="icon-card">
-              <div className="icon-card-icon">
-                <RiTeamLine size={100} />
-              </div>
-              <div className="icon-card-text"> Partner</div>
-            </div>
-          </Link>
-          
-          {/* --------- CARD -------------- */}
-          
-          <Link to="/aboutus">
-            <div className="icon-card">
-              <div className="icon-card-icon">
-                <BsPersonBoundingBox size={100} />
-              </div>
-              <div className="icon-card-text"> Wer wir sind</div>
-            </div>
-          </Link>
-          
-          {/* --------- CARD -------------- */}
-          
-          <Link to="/bonus">
-            <div className="icon-card">
-              <div className="icon-card-icon">
-                <GiReceiveMoney size={100} />
-              </div>
-              <div className="icon-card-text"> Bonusprogramm</div>
-            </div>
-          </Link>
-          
-          
-          {/* --------- CARD -------------- */}
-          
-          <Link to="/blog">
-            <div className="icon-card">
-              <div className="icon-card-icon">
-                <ImNewspaper size={100} />
-              </div>
-              <div className="icon-card-text"> Blog</div>
-            </div>
-          </Link>
-          
-            {/* --------- CARD -------------- */}
-          
-          <a href="/Psyche" target="_blank" rel="noreferrer">
-            <div className="icon-card">
-              <div className="icon-card-icon">
-                <RiPsychotherapyFill size={100} />
-              </div>
-              <div className="icon-card-text"> BU und Psyche</div>
-            </div>
-          </a>
-          {/* --------- CARD -------------- */}
-          
-          <a href={Musterpolice} target="_blank" rel="noreferrer">
-            <div className="icon-card">
-              <div className="icon-card-icon">
-                <FaFileContract size={100} />
-              </div>
-              <div className="icon-card-text"> Musterpolice</div>
-            </div>
-          </a>
-        
-          
-          {/* --------- CARD -------------- */}
-          
-          <a href={Erstinformation} target="_blank" rel="noreferrer">
-            <div className="icon-card">
-              <div className="icon-card-icon">
-                <FaFileContract size={100} />
-              </div>
-              <div className="icon-card-text">Erstinformation</div>
-            </div>
-          </a>
-          
-          {/* --------- CARD -------------- */}
-          
-          <a href={Policeninfoblatt} target="_blank" rel="noreferrer">
-            <div className="icon-card">
-              <div className="icon-card-icon">
-                <FaFileContract size={100} />
-              </div>
-              <div className="icon-card-text"> Produktinfoblatt</div>
-            </div>
-          </a>
-          {/* ---------------- */}
         </div>
       </div>
     </>

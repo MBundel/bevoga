@@ -39,6 +39,7 @@ app.get("/firebase", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`server started on port ${PORT}`));
+app.use(require('prerender-node').set('prerenderToken', 'OUFC43YQ2hPkkavBfmwx'));
 
 // // some stuff
 // app.get('/',  (req, res) => {

@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../Button";
 import * as buquestions from "../../records/BuQuestions.js";
 import Accordionfunction from "../Accordion";
-
+import {Helmet} from 'react-helmet-async'
 
 import "../css/MainPages.css";
 
@@ -14,6 +14,12 @@ const buQuestionsLong = buquestions.buQuestionsLong;
 export default function WhatsaBu() {
   return (
     <>
+      
+     <Helmet>
+      <title>Was ist eine Berufsunfähigkeitsversicherung  </title>
+      <meta name="description" content="Alle wichtigen Infos im Überblick"/> 
+      <link rel="canonical" href="/whatsabu" />
+    </Helmet>
       <div className="background">
       <img src="./img/whatsabu.jpg" alt="fragezeichen" className="background-img" />
       <div className="space"></div>

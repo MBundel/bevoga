@@ -24,7 +24,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <img src="../../img/bevoga_weiss.png" width="110px" height="auto" alt="bevoga-logo" />
+            <img src="../../img/bevoga_weiss.png" width="110px" height="auto" alt="bevoga-logo" title="bevoga-logo" loading="eager" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
           <GiHamburgerMenu className="icon"/>

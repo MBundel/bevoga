@@ -1,11 +1,41 @@
 .blog>p {
     line-height: 200%;
-    font-size: 2.5vh
+   
 }
-.blog>h4{
-    font-size: 3.5vh
-}
+
 .blog {
     width: 80%;
 
+}
+.blog >p >ul > li {
+    margin-left: 1rem;
+}
+
+
+.blog > p > a {
+    color: #FFC857 ;
+}
+.blog  > a {
+    color: #FFC857 ;
+}
+.blogImg {
+    width: 50%;
+    margin-left: 25%;
+    
+}
+
+@media (max-width: 700px) {
+    .blog {
+        width: 100%;
+    }
+    .blogImg {
+        width: 100%;
+        margin-left: 0%;
+    }
+    .blog>p {
+        line-height: 250%;
+    }
+    .blog>a {
+        line-height: 250%;
+    }
 }

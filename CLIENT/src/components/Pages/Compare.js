@@ -1,6 +1,6 @@
 import React from "react";
 import Table from "../Table";
-
+import {Helmet} from 'react-helmet-async'
 import * as buQuestions from "../../records/BuQuestions.js";
 
 import { Button } from "../Button";
@@ -23,6 +23,12 @@ const colNames = ["frage", "bevoga", "gewöhnliche BU"];
 function Compare() {
   return (
     <>
+      
+     <Helmet>
+      <title> Vergleich: standard BU und unsere BU </title>
+      <meta name="description" content="Wie unterscheiden sich  die Berufsunfähigkeitsversicherungen?"/> 
+      <link rel="canonical" href="/compare" />
+    </Helmet>
       <img src="./img/compare.jpg" alt="vergleich" className="background-img" />
       <div className="contentDiv">
        

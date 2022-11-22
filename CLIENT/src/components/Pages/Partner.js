@@ -2,6 +2,7 @@ import React from "react";
 import Characteristics from "../Characteristics";
 import * as partnerChar from "../../records/PartnerChar.js";
 import { Button } from "../Button";
+import {Helmet} from 'react-helmet-async'
 
 import "../css/MainPages.css";
 
@@ -10,6 +11,12 @@ const characteristics = partnerChar.PartnerChar;
 export default function Partner() {
   return (
     <div>
+        
+     <Helmet>
+      <title>Alles über unsere  Bu-Partner </title>
+      <meta name="description" content="Bibliothek unserer bevoga-Absicherung"/> 
+      <link rel="canonical" href="/partner" />
+    </Helmet>
       <img
         src="./img/Partner.jpg"
         alt="fragezeichen"
