@@ -1,7 +1,7 @@
 export const infoCardOne = [
   {
     id: 1,
-    header: "Vorteile diese Versicherung!",
+    header: "Vorteile von bevoga!",
     infoTextDefault: "DEINE GRÖSSTEN BENEFITS",
     sectionOne: "KEINE GESUNDHEITSFRAGEN",
     sectionTwo: "GERINGER BEITRAG",
@@ -38,7 +38,7 @@ export const infoCardOne = [
         <h2> Schnell und Einfach</h2> Wir möchten, dass sich jeder seine
         Existensgrundlage absichern kann. Daher lässt sich unsere
         Berufsunfähigkeitsversicherung ganz bequem innerhalb von 10 Minuten
-        online beantragen. Wer einen persönlichen Ansprechpartner wünscht, den
+        online beantragen. Wer einen persönlichen Ansprechpartner von bevoga wünscht, den
         unterstützen wir
         <a href="/contact" target={"_blank"} rel="noreferrer">
           via Mail, WhatsApp, Telefon oder im (Online-)Termin.
@@ -120,7 +120,7 @@ export const infoCardOne = [
     ),
     infoTextTwoShort: (
       <>
-        <h2> Mitgleidschaft eines Kollektivs</h2>Damit du über uns deine
+        <h2> Mitgleidschaft eines Kollektivs</h2>Damit du über bevoga deine
         günstige Absicherung bekommen kannst, wirst du einfach Mitglied einer
         unserer Partner, womit du damit einem entsprechenden Kollektiv
         angehörst. Denn erst durch diese Kollektivbildung können wir auf eine

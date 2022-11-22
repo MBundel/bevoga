@@ -1,0 +1,11 @@
+.blog>p {
+    line-height: 200%;
+    font-size: 2.5vh
+}
+.blog>h4{
+    font-size: 3.5vh
+}
+.blog {
+    width: 80%;
+
+}

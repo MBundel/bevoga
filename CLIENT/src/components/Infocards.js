@@ -14,21 +14,21 @@ import { IoMdPhonePortrait } from "react-icons/io";
 
 function Infocards(props) {
   const [text, setText] = useState(props.infoTextDefault);
-  const [textLong, settextLong] = useState(props.infoTextDefault);
+ 
 
   const [show, setShow] = useState(false);
 
   function textOne() {
     setText(props.infoTextOneShort);
-    settextLong(props.infoTextOneLong);
+   
   }
   function textTwo() {
     setText(props.infoTextTwoShort);
-    settextLong(props.infoTextTwoLong);
+   
   }
   function textThree() {
     setText(props.infoTextThreeShort);
-    settextLong(props.infoTextThreeLong);
+  
   }
   function textToContact() {
     setText(
@@ -107,7 +107,8 @@ function Infocards(props) {
         </tbody>
       </>
     );
-    settextLong("");
+   
+  
   }
 
   return (
@@ -157,7 +158,7 @@ function Infocards(props) {
         <div className="infocard-body">
           <div>
             <p>
-              {!show ? text : null} {show ? textLong : null}
+              {!show ? text : null} 
             </p>
           </div>
           <div className="infocard-body-link">

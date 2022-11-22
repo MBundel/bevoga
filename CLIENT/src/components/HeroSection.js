@@ -9,12 +9,12 @@ import "./css/Icons.css";
 function Herosection() {
   return (
     <div className="hero-container">
-      <video src="./videos/handDach_HD.mov" type="video" autoPlay muted></video>
+      <video src="./videos/handDach_SD.mov" type="video" autoPlay  muted></video>
       <div className="space"></div>
       
         <div className="hero-info-box">
-          <h1>BERUFSUNFÄHIGKEITSVERSICHERUNG</h1>
-          <h2>OHNE GESUNDHEITSFRAGEN</h2>
+          <h2>BERUFSUNFÄHIGKEITSVERSICHERUNG <br />
+          OHNE GESUNDHEITSFRAGEN</h2>
           {/* Container Start */}
           <div className="icon-container">
             <div className="icon-box">

@@ -35,7 +35,7 @@ export const PartnerChar = [
     img: "../../img/ikk.png",
     imgAlt: "Logo vom Kooperationspartner",
     title: "Die Innovationskasse",
-    infoText: ipsum,
+    infoText: "Die Innovationskasse geht bundesweit neue Wege. Gemeinsames Wachstum sichert Freiräume. Der neue Name und ein neues Markenzeichen sind dabei nur der Anfang.",
     keywords: {
       website: "https://die-ik.de",
       additionalContribution: "1,3%",

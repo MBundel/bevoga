@@ -175,10 +175,14 @@ object-position: top left;
   width: 80%;
   margin: auto;
   padding: 2rem;
-  border: solid 2px #e02e1a;
+  border: solid 2px #EF8275;
   border-radius: 10px;
-  background-color:rgba(224, 46, 26, .1) ;
- }  
+  background-color: rgba(239, 130, 117, .6)
+ } 
+
+ .importantBox >h2{
+  color: #2E4057;
+ } 
    
  
 

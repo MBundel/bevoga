@@ -37,9 +37,7 @@ function Home() {
       infoTextOneShort= {infocardOne.infoTextOneShort}
       infoTextTwoShort={infocardOne.infoTextTwoShort}
       infoTextThreeShort={infocardOne.infoTextThreeShort}
-      infoTextOneLong={infocardOne.infoTextOneLong}
-      infoTextTwoLong={infocardOne.infoTextTwoLong}
-      infoTextThreeLong={infocardOne.infoTextThreeLong}   
+   
       />
      ))}
      <CalcSlider/>
@@ -49,7 +47,7 @@ function Home() {
       <div className="centeredContent">
       <Button
                 path="/request"
-                class="btn-middle btn-white btn"
+                class="btn-middle btn-transparent btn"
                 text="zum Antrag"
               />
       </div></div>

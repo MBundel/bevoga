@@ -17,6 +17,7 @@ import { BsPersonBoundingBox } from "react-icons/bs";
 import { GiReceiveMoney } from "react-icons/gi";
 import { FaFileContract } from "react-icons/fa";
 import { ImNewspaper } from "react-icons/im";
+import { RiPsychotherapyFill } from "react-icons/ri";
 
 
 export default function Infos() {
@@ -111,6 +112,16 @@ export default function Infos() {
             </div>
           </Link>
           
+            {/* --------- CARD -------------- */}
+          
+          <a href="/Psyche" target="_blank" rel="noreferrer">
+            <div className="icon-card">
+              <div className="icon-card-icon">
+                <RiPsychotherapyFill size={100} />
+              </div>
+              <div className="icon-card-text"> BU und Psyche</div>
+            </div>
+          </a>
           {/* --------- CARD -------------- */}
           
           <a href={Musterpolice} target="_blank" rel="noreferrer">
@@ -121,6 +132,7 @@ export default function Infos() {
               <div className="icon-card-text"> Musterpolice</div>
             </div>
           </a>
+        
           
           {/* --------- CARD -------------- */}
           

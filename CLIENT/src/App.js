@@ -11,23 +11,24 @@ import {
 import { useEffect } from "react";
 
 //pages
-import Home from "./components/Pages/Home";
-import AboutUs from "./components/Pages/AboutUs";
-import Contact from "./components/Pages/Contact";
-import Infos from "./components/Pages/Infos";
-import Request from "./components/Pages/Request";
-import Footer from "./components/Footer";
-import Impressum from "./components/Pages/Impressum";
-import WhatsaBu from "./components/Pages/WhatsaBu";
-import Test from "./components/Pages/Test";
-import Compare from "./components/Pages/Compare";
-import Partner from "./components/Pages/Partner";
-import Bonus from "./components/Pages/Bonus";
-import Concept from "./components/Pages/Concept";
-import Blog from "./components/Pages/Blog";
-import Privacy from "./components/Pages/Privacy";
+import Home       from "./components/Pages/Home";
+import AboutUs    from "./components/Pages/AboutUs";
+import Contact    from "./components/Pages/Contact";
+import Infos      from "./components/Pages/Infos";
+import Request    from "./components/Pages/Request";
+import Footer     from "./components/Footer";
+import Impressum  from "./components/Pages/Impressum";
+import WhatsaBu   from "./components/Pages/WhatsaBu";
+import Test       from "./components/Pages/Test";
+import Compare    from "./components/Pages/Compare";
+import Partner    from "./components/Pages/Partner";
+import Bonus      from "./components/Pages/Bonus";
+import Concept    from "./components/Pages/Concept";
+import Blog       from "./components/Pages/Blog";
+import Privacy    from "./components/Pages/Privacy";
+import Psyche     from "./components/Pages/blog-pages/Psyche";
 
-//hompeage- modules
+//homepeage- modules
 import Navbar from "./components/Navbar";
 import ContactNow from "./components/ContactNow";
 
@@ -35,20 +36,26 @@ import ContactNow from "./components/ContactNow";
 import "./components/css/MainPages.css";
 import "./components/css/Media.css";
 
-ReactGA.initialize("G-2TNHKJ93CC");
-ReactGA.pageview(window.location.pathname + window.location.search);
 
-function usePageViews() {
-  let location = useLocation();
-  useEffect(() => {
-    ReactGA.initialize("G-H0WF20SLK5");
-    ReactGA.set({ page: location.pathname });
-    ReactGA.pageview(location.pathname + window.location.search);
-  }, [location]);
-}
+const TRACKING_ID = "G-F5DBPS3J24"
+ReactGA.initialize(TRACKING_ID );
+// ReactGA.pageview(window.location.pathname + window.location.search);
+
+// function usePageViews() {
+//   let location = useLocation();
+//   useEffect(() => {
+//     ReactGA.initialize("G-F5DBPS3J24");
+//     // ReactGA.set({ page: location.pathname });
+//     ReactGA.pageview(window.location.pathname + window.location.search);
+//   }, [location]);
+// }
 
 function App() {
   // usePageViews();
+
+  useEffect(()=> {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   // console.log("1");
   // const getFirebaseData = () => {
@@ -83,6 +90,7 @@ function App() {
           <Route path="/blog"       element={<Blog      />} />
           <Route path="/privacy"    element={<Privacy   />} />
           <Route path="/bonus"      element={<Bonus     />} />
+          <Route path="/Psyche"     element={<Psyche    />} />
         </Routes>
         <ContactNow />
         <Footer />
