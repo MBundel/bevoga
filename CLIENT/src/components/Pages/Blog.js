@@ -9,6 +9,7 @@ import { BsCardChecklist } from "react-icons/bs";
 import { GoChecklist } from "react-icons/go";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { MdSick } from "react-icons/md";
+import { GiThink } from "react-icons/gi";
 
 function Blog() {
   const data = [
@@ -41,6 +42,12 @@ function Blog() {
       header: "chronische Krankheiten",
       text: "Wie chronische Krankheiten sich bei der  Versicherbarkeit der Berufsunfähigkeit  auswirken können",
       link: "/chronischeKrankheiten",
+    },
+    {
+      icon: <GiThink size={160} />,
+      header: "ist eine BU sinnvoll?",
+      text: "Hier schauen wir uns an, wann eine BU sinn ergibt und für wen sie geeignet ist.",
+      link: "/BuSinnvoll",
     },
   ];
 

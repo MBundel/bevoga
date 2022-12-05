@@ -84,7 +84,7 @@ function Herosection() {
           <Form 
           group="subscriber"
           header1="Nichts mehr verpassen"
-          header2="Wir befinden uns noch im Aufbau"
+          header2="und alle Updates erfahren!"
           button="Abschicken"
           />
         </div>

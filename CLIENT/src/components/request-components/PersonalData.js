@@ -65,7 +65,7 @@ const handleButton = () => {
           </select>
           <input onChange={handleChange} value={values.nameAG} name="nameAG" type="text" placeholder="Name Arbeitgeber" />
           <input onChange={handleChange} value={values.adressAG} name="adressAG" type="text" placeholder="Straße + Hausnummer Arbeitgeber" />
-          <input onChange={handleChange} value={values.plzAG} name="plzAG" type="text" placeholder="Postleitzahl Arbeitgeber" />
+          <input onChange={handleChange} value={values.plzAG} name="plzAG" type="text" placeholder="Postleitzahl + Ort Arbeitgeber" />
         </div>
         <div className="checkbox-div">
           <input

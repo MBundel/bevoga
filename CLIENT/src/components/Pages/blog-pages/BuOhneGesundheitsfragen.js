@@ -15,7 +15,7 @@ function BuOhneGesundheitsfragen() {
         <link rel="canonical" href="/BuOhneGesundheitsfragen" />
         <meta
           name="keywords"
-          conent="Berufsunfähigkeitsversicherung ohne Gesundheitsfragen, Bu ohne Gesundheitsprüfung, Bu Prüfung, Gesundheitsfragen "
+          conent="Berufsunfähigkeitsversicherung ohne Gesundheitsfragen, Bu ohne Gesundheitsprüfung, Bu Prüfung, bu psychotherapie, berufsunfähigkeitsversicherung psychotherapie, Gesundheitsfragen, berufsunfähigkeit "
         />
       </Helmet>
 

@@ -10,7 +10,7 @@ function BuOhneGesundheitsfragen() {
         <title>Berufsunfähigkeitsversicherung trotz Psychotheraphie</title>
         <meta
           name="description"
-          content="Berufsunfähigkeitsversicherung Bu günstig fur Handwerrker und CO"
+          content="Was darf eine Berufsunfähigkeitsversicherung kosten? Berufsunfähigkeitsversicherung Bu günstig fur Handwerrker und CO"
         />
         <link rel="canonical" href="/GuenstigeBU" />
         <meta name="keywords" conent="Günstige BU" />

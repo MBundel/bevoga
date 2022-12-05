@@ -76,5 +76,26 @@
 
       <changefreq>weekly</changefreq>
    </url>
+   <url>
+      <loc>https://bevoga.de/keineNormalannahme</loc>
+
+      <lastmod>2022-02-11</lastmod>
+
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://bevoga.de/ProBevoga</loc>
+
+      <lastmod>2022-02-11</lastmod>
+
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://bevoga.de/chronischeKrankheiten</loc>
+
+      <lastmod>2022-02-11</lastmod>
+
+      <changefreq>weekly</changefreq>
+   </url>
 
 </urlset> 

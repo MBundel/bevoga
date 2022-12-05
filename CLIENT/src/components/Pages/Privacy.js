@@ -3,14 +3,21 @@ import React from "react";
 function Privacy() {
   return (
     <div>
-      <h1 className="adsimple-312087504" style={{color:"black"}}>Datenschutzerklärung</h1>
-      <h2 id="einleitung-ueberblick" className="adsimple-312087504" style={{color:"black"}}>
+      <h1 className="adsimple-312087504" style={{ color: "darkblue" }}>
+        Datenschutzerklärung
+      </h1>
+      <h2
+        id="einleitung-ueberblick"
+        className="adsimple-312087504"
+        style={{ color: "darkblue" }}
+      >
         Einleitung und Überblick
       </h2>
       <p>
         Wir haben diese Datenschutzerklärung (Fassung 16.08.2022-312087504)
         verfasst, um Ihnen gemäß der Vorgaben der
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=312087504#d1e2269-1-1"
           target="_blank"
@@ -25,8 +32,8 @@ function Privacy() {
         Möglichkeiten Sie haben. Die verwendeten Begriffe sind
         geschlechtsneutral zu verstehen.
         <br />
-        <strong className="adsimple-312087504">Kurz gesagt:</strong> Wir informieren
-        Sie umfassend über Daten, die wir über Sie verarbeiten.
+        <strong className="adsimple-312087504">Kurz gesagt:</strong> Wir
+        informieren Sie umfassend über Daten, die wir über Sie verarbeiten.
       </p>
       <p>
         Datenschutzerklärungen klingen für gewöhnlich sehr technisch und
@@ -101,6 +108,7 @@ function Privacy() {
         Diese Datenschutz-Grundverordnung der EU können Sie selbstverständlich
         online auf EUR-Lex, dem Zugang zum EU-Recht, unter
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679"
         >
@@ -114,20 +122,22 @@ function Privacy() {
       </p>
       <ol>
         <li className="adsimple-312087504">
-          <strong className="adsimple-312087504">Einwilligung</strong> (Artikel 6
-          Absatz 1 lit. a DSGVO): Sie haben uns Ihre Einwilligung gegeben, Daten
-          zu einem bestimmten Zweck zu verarbeiten. Ein Beispiel wäre die
+          <strong className="adsimple-312087504">Einwilligung</strong> (Artikel
+          6 Absatz 1 lit. a DSGVO): Sie haben uns Ihre Einwilligung gegeben,
+          Daten zu einem bestimmten Zweck zu verarbeiten. Ein Beispiel wäre die
           Speicherung Ihrer eingegebenen Daten eines Kontaktformulars.
         </li>
         <li className="adsimple-312087504">
-          <strong className="adsimple-312087504">Vertrag</strong> (Artikel 6 Absatz
-          1 lit. b DSGVO): Um einen Vertrag oder vorvertragliche Verpflichtungen
-          mit Ihnen zu erfüllen, verarbeiten wir Ihre Daten. Wenn wir zum
-          Beispiel einen Kaufvertrag mit Ihnen abschließen, benötigen wir vorab
-          personenbezogene Informationen.
+          <strong className="adsimple-312087504">Vertrag</strong> (Artikel 6
+          Absatz 1 lit. b DSGVO): Um einen Vertrag oder vorvertragliche
+          Verpflichtungen mit Ihnen zu erfüllen, verarbeiten wir Ihre Daten.
+          Wenn wir zum Beispiel einen Kaufvertrag mit Ihnen abschließen,
+          benötigen wir vorab personenbezogene Informationen.
         </li>
         <li className="adsimple-312087504">
-          <strong className="adsimple-312087504">Rechtliche Verpflichtung</strong>
+          <strong className="adsimple-312087504">
+            Rechtliche Verpflichtung
+          </strong>
           (Artikel 6 Absatz 1 lit. c DSGVO): Wenn wir einer rechtlichen
           Verpflichtung unterliegen, verarbeiten wir Ihre Daten. Zum Beispiel
           sind wir gesetzlich verpflichtet Rechnungen für die Buchhaltung
@@ -153,16 +163,20 @@ function Privacy() {
       <p>Zusätzlich zu der EU-Verordnung gelten auch noch nationale Gesetze:</p>
       <ul className="adsimple-312087504">
         <li className="adsimple-312087504">
-          In <strong className="adsimple-312087504">Österreich</strong> ist dies das
-          Bundesgesetz zum Schutz natürlicher Personen bei der Verarbeitung
+          In <strong className="adsimple-312087504">Österreich</strong> ist dies
+          das Bundesgesetz zum Schutz natürlicher Personen bei der Verarbeitung
           personenbezogener Daten (
-          <strong className="adsimple-312087504">Datenschutzgesetz</strong>), kurz
+          <strong className="adsimple-312087504">Datenschutzgesetz</strong>),
+          kurz
           <strong className="adsimple-312087504">DSG</strong>.
         </li>
         <li className="adsimple-312087504">
-          In <strong className="adsimple-312087504">Deutschland</strong> gilt das
-          <strong className="adsimple-312087504">Bundesdatenschutzgesetz</strong>,
-          kurz<strong className="adsimple-312087504"> BDSG</strong>.
+          In <strong className="adsimple-312087504">Deutschland</strong> gilt
+          das
+          <strong className="adsimple-312087504">
+            Bundesdatenschutzgesetz
+          </strong>
+          , kurz<strong className="adsimple-312087504"> BDSG</strong>.
         </li>
       </ul>
       <p>
@@ -177,23 +191,28 @@ function Privacy() {
         personenbezogener Daten haben, finden Sie nachfolgend die Kontaktdaten
         der verantwortlichen Person bzw. Stelle:
         <br />
-        <span className="adsimple-312087504" >
+        <span className="adsimple-312087504">
           fimdeu UG (haftungsbeschränkt)
           <br />
           Osterstraße 2<br />
           26122 Oldenburg
         </span>
         <br />
-        <span >
-          Vertretungsberechtigt: Friedrich Beeken
-        </span>
+        <span>Vertretungsberechtigt: Friedrich Beeken</span>
         <br />
-        E-Mail: <a href="mailto:fb@fimdeu.de">fb@fimdeu.de</a>
+        E-Mail:{" "}
+        <a style={{ color: "darkblue" }} href="mailto:fb@fimdeu.de">
+          fb@fimdeu.de
+        </a>
         <br />
-        Telefon: <a href="tel:0441 / 30916171"> 0441 / 30916171</a>
+        Telefon:{" "}
+        <a style={{ color: "darkblue" }} href="tel:0441 / 30916171">
+          {" "}
+          0441 / 30916171
+        </a>
         <br />
         Impressum:
-        <a href="https://www.bevoga/impressum/">
+        <a style={{ color: "darkblue" }} href="https://www.bevoga/impressum/">
           https://www.bevoga/impressum/
         </a>
       </p>
@@ -335,6 +354,7 @@ function Privacy() {
         Aufsichtsbehörde beschweren. Diese ist für Österreich die
         Datenschutzbehörde, deren Website Sie unter
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://www.dsb.gv.at/?tid=312087504"
           target="_blank"
@@ -345,6 +365,7 @@ function Privacy() {
         finden. In Deutschland gibt es für jedes Bundesland einen
         Datenschutzbeauftragten. Für nähere Informationen können Sie sich an die
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://www.bfdi.bund.de/DE/Home/home_node.html"
           target="_blank"
@@ -362,7 +383,7 @@ function Privacy() {
       <table border="1" cellpadding="15">
         <tbody>
           <tr>
-            <td style={{color:"black"}}>
+            <td style={{ color: "darkblue" }}>
               <strong className="adsimple-312087504">
                 Web Analytics Datenschutzerklärung Zusammenfassung
               </strong>
@@ -492,7 +513,6 @@ function Privacy() {
         Der Einsatz von Web-Analytics setzt Ihre Einwilligung voraus, welche wir
         mit unserem Cookie Popup eingeholt haben. Diese Einwilligung stellt laut
         <strong className="adsimple-312087504">
-          
           Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)
         </strong>
         die Rechtsgrundlage für die Verarbeitung personenbezogener Daten, wie
@@ -556,6 +576,7 @@ function Privacy() {
         EU-Kommission. Sie finden den Beschluss und die entsprechenden
         Standardvertragsklauseln u.a. hier:
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj?locale=de"
         >
@@ -567,12 +588,13 @@ function Privacy() {
         Terms), welche auf die Standardvertragsklauseln verweisen, finden Sie
         unter
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://business.safety.google/intl/de/adsprocessorterms/"
           target="_blank"
           rel="follow noreferrer"
         >
-          https://business.safety.google/intl/de/adsprocessorterms/
+          Business Safety
         </a>
         .
       </p>
@@ -580,6 +602,7 @@ function Privacy() {
         Mehr über die Daten, die durch die Verwendung von Firebase verarbeitet
         werden, erfahren Sie in der Privacy Policy auf
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://policies.google.com/privacy?hl=de"
           target="_blank"
@@ -595,10 +618,10 @@ function Privacy() {
       >
         Google Analytics Datenschutzerklärung
       </h2>
-      <table border="1" cellpadding="15" style={{color:"black"}}>
+      <table border="1" cellpadding="15" style={{ color: "darkblue" }}>
         <tbody>
           <tr>
-            <td style={{color:"black"}}>
+            <td style={{ color: "darkblue" }}>
               <strong className="adsimple-312087504">
                 Google Analytics Datenschutzerklärung Zusammenfassung
               </strong>
@@ -748,7 +771,8 @@ function Privacy() {
         speichern. Grundsätzlich dient es zur Unterscheidung der
         Webseitenbesucher.
         <br />
-        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 2 Jahren
+        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 2
+        Jahren
       </p>
       <p>
         <strong className="adsimple-312087504">Name:</strong> _gid
@@ -756,32 +780,34 @@ function Privacy() {
         <strong className="adsimple-312087504">Wert: </strong>
         2.1687193234.152312087504-1
         <br />
-        <strong className="adsimple-312087504">Verwendungszweck:</strong> Das Cookie
-        dient auch zur Unterscheidung der Webseitenbesucher
+        <strong className="adsimple-312087504">Verwendungszweck:</strong> Das
+        Cookie dient auch zur Unterscheidung der Webseitenbesucher
         <br />
-        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 24 Stunden
+        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 24
+        Stunden
       </p>
       <p>
         <strong className="adsimple-312087504">Name:</strong>
         _gat_gtag_UA_&lt;property-id&gt;
         <br />
         <strong className="adsimple-312087504">Wert:</strong> 1<br />
-        <strong className="adsimple-312087504">Verwendungszweck:</strong> Wird zum
-        Senken der Anforderungsrate verwendet. Wenn Google Analytics über den
-        Google Tag Manager bereitgestellt wird, erhält dieser Cookie den Namen
-        _dc_gtm_ &lt;property-id&gt;.
+        <strong className="adsimple-312087504">Verwendungszweck:</strong> Wird
+        zum Senken der Anforderungsrate verwendet. Wenn Google Analytics über
+        den Google Tag Manager bereitgestellt wird, erhält dieser Cookie den
+        Namen _dc_gtm_ &lt;property-id&gt;.
         <br />
-        <strong className="adsimple-312087504">Ablaufdatum: </strong>nach 1 Minute
+        <strong className="adsimple-312087504">Ablaufdatum: </strong>nach 1
+        Minute
       </p>
       <p>
         <strong className="adsimple-312087504">Name:</strong> AMP_TOKEN
         <br />
         <strong className="adsimple-312087504">Wert:</strong> keine Angaben
         <br />
-        <strong className="adsimple-312087504">Verwendungszweck:</strong> Das Cookie
-        hat einen Token, mit dem eine User ID vom AMP-Client-ID-Dienst abgerufen
-        werden kann. Andere mögliche Werte weisen auf eine Abmeldung, eine
-        Anfrage oder einen Fehler hin.
+        <strong className="adsimple-312087504">Verwendungszweck:</strong> Das
+        Cookie hat einen Token, mit dem eine User ID vom AMP-Client-ID-Dienst
+        abgerufen werden kann. Andere mögliche Werte weisen auf eine Abmeldung,
+        eine Anfrage oder einen Fehler hin.
         <br />
         <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 30
         Sekunden bis zu einem Jahr
@@ -792,22 +818,24 @@ function Privacy() {
         <strong className="adsimple-312087504">Wert: </strong>
         1564498958.1564498958.1564498958.1
         <br />
-        <strong className="adsimple-312087504">Verwendungszweck:</strong> Mit diesem
-        Cookie kann man Ihr Verhalten auf der Website verfolgen und die Leistung
-        messen. Das Cookie wird jedes Mal aktualisiert, wenn Informationen an
-        Google Analytics gesendet werden.
+        <strong className="adsimple-312087504">Verwendungszweck:</strong> Mit
+        diesem Cookie kann man Ihr Verhalten auf der Website verfolgen und die
+        Leistung messen. Das Cookie wird jedes Mal aktualisiert, wenn
+        Informationen an Google Analytics gesendet werden.
         <br />
-        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 2 Jahren
+        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 2
+        Jahren
       </p>
       <p>
         <strong className="adsimple-312087504">Name:</strong> __utmt
         <br />
         <strong className="adsimple-312087504">Wert:</strong> 1<br />
-        <strong className="adsimple-312087504">Verwendungszweck:</strong> Das Cookie
-        wird wie _gat_gtag_UA_&lt;property-id&gt; zum Drosseln der
+        <strong className="adsimple-312087504">Verwendungszweck:</strong> Das
+        Cookie wird wie _gat_gtag_UA_&lt;property-id&gt; zum Drosseln der
         Anforderungsrate verwendet.
         <br />
-        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 10 Minuten
+        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 10
+        Minuten
       </p>
       <p>
         <strong className="adsimple-312087504">Name:</strong> __utmb
@@ -819,7 +847,8 @@ function Privacy() {
         aktualisiert, wenn neue Daten bzw. Infos an Google Analytics gesendet
         werden.
         <br />
-        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 30 Minuten
+        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 30
+        Minuten
       </p>
       <p>
         <strong className="adsimple-312087504">Name:</strong> __utmc
@@ -831,8 +860,8 @@ function Privacy() {
         festzulegen. Dabei handelt es sich um ein Session-Cookie und wird nur
         solange gespeichert, bis Sie den Browser wieder schließen.
         <br />
-        <strong className="adsimple-312087504">Ablaufdatum:</strong> Nach Schließung
-        des Browsers
+        <strong className="adsimple-312087504">Ablaufdatum:</strong> Nach
+        Schließung des Browsers
       </p>
       <p>
         <strong className="adsimple-312087504">Name:</strong> __utmz
@@ -840,30 +869,32 @@ function Privacy() {
         <strong className="adsimple-312087504">Wert:</strong>
         m|utmccn=(referral)|utmcmd=referral|utmcct=/
         <br />
-        <strong className="adsimple-312087504">Verwendungszweck:</strong> Das Cookie
-        wird verwendet, um die Quelle des Besucheraufkommens auf unserer Website
-        zu identifizieren. Das heißt, das Cookie speichert, von wo Sie auf
-        unsere Website gekommen sind. Das kann eine andere Seite bzw. eine
+        <strong className="adsimple-312087504">Verwendungszweck:</strong> Das
+        Cookie wird verwendet, um die Quelle des Besucheraufkommens auf unserer
+        Website zu identifizieren. Das heißt, das Cookie speichert, von wo Sie
+        auf unsere Website gekommen sind. Das kann eine andere Seite bzw. eine
         Werbeschaltung gewesen sein.
         <br />
-        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 6 Monaten
+        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 6
+        Monaten
       </p>
       <p>
         <strong className="adsimple-312087504">Name:</strong> __utmv
         <br />
         <strong className="adsimple-312087504">Wert:</strong> keine Angabe
         <br />
-        <strong className="adsimple-312087504">Verwendungszweck:</strong> Das Cookie
-        wird verwendet, um benutzerdefinierte Userdaten zu speichern. Es wird
-        immer aktualisiert, wenn Informationen an Google Analytics gesendet
+        <strong className="adsimple-312087504">Verwendungszweck:</strong> Das
+        Cookie wird verwendet, um benutzerdefinierte Userdaten zu speichern. Es
+        wird immer aktualisiert, wenn Informationen an Google Analytics gesendet
         werden.
         <br />
-        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 2 Jahren
+        <strong className="adsimple-312087504">Ablaufdatum:</strong> nach 2
+        Jahren
       </p>
       <p>
-        <strong className="adsimple-312087504">Anmerkung:</strong> Diese Aufzählung
-        kann keinen Anspruch auf Vollständigkeit erheben, da Google die Wahl
-        ihrer Cookies immer wieder auch verändert.
+        <strong className="adsimple-312087504">Anmerkung:</strong> Diese
+        Aufzählung kann keinen Anspruch auf Vollständigkeit erheben, da Google
+        die Wahl ihrer Cookies immer wieder auch verändert.
       </p>
       <p>
         Hier zeigen wir Ihnen einen Überblick über die wichtigsten Daten, die
@@ -887,14 +918,14 @@ function Privacy() {
         Website nur eine Seite ansehen und dann unsere Website wieder verlassen.
       </p>
       <p>
-        <strong className="adsimple-312087504">Kontoerstellung:</strong> Wenn Sie
-        auf unserer Website ein Konto erstellen bzw. eine Bestellung machen,
+        <strong className="adsimple-312087504">Kontoerstellung:</strong> Wenn
+        Sie auf unserer Website ein Konto erstellen bzw. eine Bestellung machen,
         erhebt Google Analytics diese Daten.
       </p>
       <p>
-        <strong className="adsimple-312087504">IP-Adresse:</strong> Die IP-Adresse
-        wird nur in gekürzter Form dargestellt, damit keine eindeutige Zuordnung
-        möglich ist.
+        <strong className="adsimple-312087504">IP-Adresse:</strong> Die
+        IP-Adresse wird nur in gekürzter Form dargestellt, damit keine
+        eindeutige Zuordnung möglich ist.
       </p>
       <p>
         <strong className="adsimple-312087504">Standort:</strong> Über die
@@ -902,9 +933,11 @@ function Privacy() {
         Diesen Vorgang bezeichnet man auch als IP- Standortbestimmung.
       </p>
       <p>
-        <strong className="adsimple-312087504">Technische Informationen:</strong> Zu
-        den technischen Informationen zählen unter anderem Ihr Browsertyp, Ihr
-        Internetanbieter oder Ihre Bildschirmauflösung.
+        <strong className="adsimple-312087504">
+          Technische Informationen:
+        </strong>{" "}
+        Zu den technischen Informationen zählen unter anderem Ihr Browsertyp,
+        Ihr Internetanbieter oder Ihre Bildschirmauflösung.
       </p>
       <p>
         <strong className="adsimple-312087504">Herkunftsquelle:</strong> Google
@@ -928,10 +961,11 @@ function Privacy() {
         amerikanischen Servern gespeichert. Hier können Sie genau nachlesen wo
         sich die Google-Rechenzentren befinden:
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://www.google.com/about/datacenters/locations/?hl=de"
         >
-          https://www.google.com/about/datacenters/inside/locations/?hl=de
+          Google Locations
         </a>
       </p>
       <p>
@@ -991,6 +1025,7 @@ function Privacy() {
         dass Google Analytics Ihre Daten verwendet. Das Browser-Add-on können
         Sie unter
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://tools.google.com/dlpage/gaoptout?hl=de"
           target="_blank"
@@ -1012,7 +1047,6 @@ function Privacy() {
         wir mit unserem Cookie Popup eingeholt haben. Diese Einwilligung stellt
         laut
         <strong className="adsimple-312087504">
-          
           Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)
         </strong>
         die Rechtsgrundlage für die Verarbeitung personenbezogener Daten, wie
@@ -1055,6 +1089,7 @@ function Privacy() {
         EU-Kommission. Sie finden den Beschluss und die entsprechenden
         Standardvertragsklauseln u.a. hier:
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj?locale=de"
           target="_blank"
@@ -1068,33 +1103,38 @@ function Privacy() {
         Terms), welche auf die Standardvertragsklauseln verweisen, finden Sie
         unter
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://business.safety.google/intl/de/adsprocessorterms/"
           target="_blank"
           rel="follow noreferrer"
         >
-          https://business.safety.google/intl/de/adsprocessorterms/
+          Business Safety
         </a>
         .
       </p>
       <p>
         Wir hoffen, wir konnten Ihnen die wichtigsten Informationen rund um die
         Datenverarbeitung von Google Analytics näherbringen. Wenn Sie mehr über
-        den Tracking-Dienst erfahren wollen, empfehlen wir diese beiden Links:
+        den Tracking-Dienst erfahren wollen, empfehlen wir diese beiden Links:{" "}
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://marketingplatform.google.com/about/analytics/terms/de/"
+          target="_blank"
+          rel="noreferrer noreferrer"
         >
-          https://marketingplatform.google.com/about/analytics/terms/de/
+          Marketingplattform
         </a>
-        und
+        und{" "}
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://support.google.com/analytics/answer/6004245?hl=de"
           target="_blank"
           rel="noreferrer noreferrer"
         >
-          https://support.google.com/analytics/answer/6004245?hl=de
+          GoogleAnalytics
         </a>
         .
       </p>
@@ -1104,7 +1144,7 @@ function Privacy() {
       <table border="1" cellpadding="15">
         <tbody>
           <tr>
-            <td style={{color:"black"}}>
+            <td style={{ color: "darkblue" }}>
               <strong className="adsimple-312087504">
                 E-Mail-Marketing Zusammenfassung
               </strong>
@@ -1231,9 +1271,9 @@ function Privacy() {
       <h3 className="adsimple-312087504">Rechtsgrundlage</h3>
       <p>
         Das Versenden unseres Newsletters erfolgt auf Grundlage Ihrer
-        <strong className="adsimple-312087504">Einwilligung</strong> (Artikel 6 Abs.
-        1 lit. a DSGVO). Das heißt, wir dürfen Ihnen nur dann einen Newsletter
-        schicken, wenn Sie sich zuvor aktiv dafür angemeldet haben.
+        <strong className="adsimple-312087504">Einwilligung</strong> (Artikel 6
+        Abs. 1 lit. a DSGVO). Das heißt, wir dürfen Ihnen nur dann einen
+        Newsletter schicken, wenn Sie sich zuvor aktiv dafür angemeldet haben.
         Gegebenenfalls können wir Ihnen auch Werbenachrichten auf Grundlage des
         § 7 Abs. 3 UWG senden, sofern Sie unser Kunde geworden sind und der
         Verwendung ihrer E-Mailadresse für Direktwerbung nicht widersprochen
@@ -1259,6 +1299,7 @@ function Privacy() {
           Deutschland. Mehr über die Daten, die durch die Verwendung von
           CleverReach verarbeitet werden, erfahren Sie in der Privacy Policy auf
           <a
+            style={{ color: "darkblue" }}
             className="adsimple-312087504"
             href="https://www.cleverreach.com/de/datenschutz/"
           >
@@ -1267,13 +1308,16 @@ function Privacy() {
           .
         </span>
       </p>
-      <h2 id="messenger-kommunikation-einleitung" className="adsimple-312087504">
+      <h2
+        id="messenger-kommunikation-einleitung"
+        className="adsimple-312087504"
+      >
         Messenger &amp; Kommunikation Einleitung
       </h2>
       <table border="1" cellpadding="15">
         <tbody>
           <tr>
-            <td style={{color:"black"}}>
+            <td style={{ color: "darkblue" }}>
               <strong className="adsimple-312087504">
                 Messenger &amp; Kommunikation Datenschutzerklärung
                 Zusammenfassung
@@ -1375,7 +1419,9 @@ function Privacy() {
         widersprechen können, sollten Sie die jeweilige Datenschutzerklärung des
         Unternehmens sorgfältig durchlesen.
       </p>
-      <h3 className="adsimple-312087504">Wie lange werden Daten gespeichert?</h3>
+      <h3 className="adsimple-312087504">
+        Wie lange werden Daten gespeichert?
+      </h3>
       <p>
         Wie lange die Daten verarbeitet und gespeichert werden, hängt in erster
         Linie von unseren verwendeten Tools ab. Weiter unten erfahren Sie mehr
@@ -1415,7 +1461,9 @@ function Privacy() {
         Messenger- &amp; Kommunikationsfunktionen verarbeitet und gespeichert
         werden können, gilt diese Einwilligung als Rechtsgrundlage der
         Datenverarbeitung
-        <strong className="adsimple-312087504">(Art. 6 Abs. 1 lit. a DSGVO)</strong>
+        <strong className="adsimple-312087504">
+          (Art. 6 Abs. 1 lit. a DSGVO)
+        </strong>
         . Wir bearbeiten Ihre Anfrage und verwalten Ihre Daten im Rahmen
         vertraglicher oder vorvertraglicher Beziehungen, um unsere
         vorvertraglichen und vertraglichen Pflichten zu erfüllen bzw. Anfragen
@@ -1425,7 +1473,9 @@ function Privacy() {
         </strong>
         . Grundsätzlich werden Ihre Daten bei Vorliegen einer Einwilligung auch
         auf Grundlage unseres berechtigten Interesses
-        <strong className="adsimple-312087504">(Art. 6 Abs. 1 lit. f DSGVO)</strong>
+        <strong className="adsimple-312087504">
+          (Art. 6 Abs. 1 lit. f DSGVO)
+        </strong>
         an einer schnellen und guten Kommunikation mit Ihnen oder anderen Kunden
         und Geschäftspartnern gespeichert und verarbeitet.
       </p>
@@ -1463,6 +1513,7 @@ function Privacy() {
         EU-Kommission. Sie finden den Beschluss und die entsprechenden
         Standardvertragsklauseln u.a. hier:
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj?locale=de"
         >
@@ -1473,6 +1524,7 @@ function Privacy() {
         Informationen zur Datenübermittlung bei WhatsApp, welche den
         Standardvertragsklauseln entsprechen, finden Sie unter
         <a
+          style={{ color: "darkblue" }}
           className="adsimple-312087504"
           href="https://www.whatsapp.com/legal/business-data-transfer-addendum-20210927"
         >
@@ -1482,14 +1534,19 @@ function Privacy() {
       <p>
         Mehr über die Daten, die durch die Verwendung von WhatsApp verarbeitet
         werden, erfahren Sie in der Privacy Policy auf
-        <a className="adsimple-312087504" href="https://www.whatsapp.com/privacy">
+        <a
+          style={{ color: "darkblue" }}
+          className="adsimple-312087504"
+          href="https://www.whatsapp.com/privacy"
+        >
           https://www.whatsapp.com/privacy
         </a>
       </p>
       <p>Alle Texte sind urheberrechtlich geschützt.</p>
-      <p >
+      <p>
         Quelle: Erstellt mit dem
         <a
+          style={{ color: "darkblue" }}
           href="https://www.adsimple.de/datenschutz-generator/"
           title="Datenschutz Generator von AdSimple für Deutschland"
         >

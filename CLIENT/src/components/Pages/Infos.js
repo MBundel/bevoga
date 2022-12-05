@@ -23,6 +23,8 @@ import { BsCardChecklist } from "react-icons/bs";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { GoChecklist } from "react-icons/go";
 import { MdSick } from "react-icons/md";
+import { GiThink } from "react-icons/gi";
+import { RiErrorWarningFill } from "react-icons/ri";
 
 export default function Infos() {
   const infocardData = [
@@ -88,33 +90,47 @@ export default function Infos() {
     },
     {
       id: 11,
-      icon: <GoChecklist size={100} />,      
+      icon: <GoChecklist size={100} />,
       link: "/ProBevoga",
       text: "9 gute Gründe für uns ",
     },
     {
       id: 12,
-      icon: <MdSick size={100} />,      
+      icon: <MdSick size={100} />,
       link: "/chronischeKrankheiten",
       text: "chronische Krankheiten ",
     },
+    {
+      id: 13,
+      icon: <GiThink size={100} />,
+      text: "Ist eine BU sinnvoll?",
+      link: "/BuSinnvoll",
+    },
+    {
+      id: 13,
+      icon: <RiErrorWarningFill size={100} />,
+      text: "Keine Normalannahme",
+      link: "/keineNormalannahme",
+    },
     // hier über einfügen
+  ];
+  const pdfObj = [
     {
       id: 901,
       icon: <FaFileContract size={100} />,
-      link: {Musterpolice},
+      link: Musterpolice,
       text: "Musterpolice",
     },
     {
       id: 902,
       icon: <FaFileContract size={100} />,
-      link: {Erstinformation},
+      link: Erstinformation,
       text: "Erstinformation",
     },
     {
       id: 903,
       icon: <FaFileContract size={100} />,
-      link: {Policeninfoblatt},
+      link: Policeninfoblatt,
       text: "Policeninfoblatt",
     },
   ];
@@ -146,7 +162,15 @@ export default function Infos() {
               </div>
             </Link>
           ))}
-
+          {/* --------- MAP-CARD -------------- */}
+          {pdfObj.map((pdfObj) => (
+            <a href={pdfObj.link} target="_blank" rel="noreferrer">
+              <div className="icon-card">
+                <div className="icon-card-icon">{pdfObj.icon}</div>
+                <div className="icon-card-text"> {pdfObj.text}</div>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </>

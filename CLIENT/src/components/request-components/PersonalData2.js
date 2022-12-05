@@ -69,10 +69,10 @@ const handleType = () => {
           />
           <input
             onChange={handleChange}
-            name="Bank"
+            name="bank"
             value={values.bank}
             type="text"
-            placeholder=" Bankname "
+            placeholder="Bankname"
           />
         </div>
  {/* ------------------- CheckBox DIV -----------------------------   */}

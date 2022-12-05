@@ -1,18 +1,23 @@
 import React from "react";
 import { Button } from "../../Button.js";
 import "../../css/BlogPage.css";
-import {Helmet} from 'react-helmet-async'
+import { Helmet } from "react-helmet-async";
 
 function Psyche() {
   return (
     <>
-
-    <Helmet>
-      <title>Berufsunfähigkeitsversicherung trotz Psychotheraphie</title>
-      <meta name="description" content="Wie du eine Berufsunfähigkeitsversicherung trotz Psychotherapie bekommst"/> 
-      <link rel="canonical" href="/Psyche" />
-      <meta name="keywords" conent="Berufsunfähigkeitsversicherung ohne Gesundheitsfragen, Bu trotz Psychotheraphie, Bu Depression, Psyche, berufsunfähigkeitsversicherung psychotherapie " />
-    </Helmet>
+      <Helmet>
+        <title>Berufsunfähigkeitsversicherung trotz Psychotheraphie</title>
+        <meta
+          name="description"
+          content="Wie du eine Berufsunfähigkeitsversicherung trotz Psychotherapie bekommst, Berufsunfähigkeitsversicherung ohne Gesundheitsfragen"
+        />
+        <link rel="canonical" href="/Psyche" />
+        <meta
+          name="keywords"
+          conent="Berufsunfähigkeitsversicherung ohne Gesundheitsfragen, Bu trotz Psychotheraphie, Bu Depression, Psyche, berufsunfähigkeitsversicherung psychotherapie, berufsunfähigkeitsversicherung therapie, berufsunfähigkeitsversicherung ohne gesundheitsfragen, berufsunfähigkeitsversicherung therapie "
+        />
+      </Helmet>
 
       <img
         src="./img/BU-und-Psyche.jpg"
@@ -172,28 +177,31 @@ function Psyche() {
           Falls doch etwas auf dich zutriffst, dann melde dich gerne bei uns und
           wir finden eine Lösung für dich.
         </p>
-
-        <img src="./img/Bu-trotz-Psychotherapie.png"
-        alt="Bu-trotz-Psychotherapie"
-        style={{marginLeft: "25%" }}
-        width="50%"
-        height="auto"
-        title="Bu-trotz-Psychotherapie"
-        loading="lazy"
+        <img
+          src="./img/Bu-trotz-Psychotherapie.png"
+          alt="Bu-trotz-Psychotherapie"
+          style={{ marginLeft: "25%" }}
+          width="50%"
+          height="auto"
+          title="Bu-trotz-Psychotherapie"
+          loading="lazy"
         />
         <br />
         <Button
-        path="/contact"
-        class="btn-middle btn-transparent btn"
-        text="Kontakt" />
+          path="/contact"
+          class="btn-middle btn-transparent btn"
+          text="Kontakt"
+        />
         <Button
-        path="/request"
-        class="btn-middle btn-transparent btn"
-        text="zum Antrag" />
+          path="/request"
+          class="btn-middle btn-transparent btn"
+          text="zum Antrag"
+        />
         <Button
-        path="/"
-        class="btn-middle btn-transparent btn"
-        text="Startseite" />
+          path="/"
+          class="btn-middle btn-transparent btn"
+          text="Startseite"
+        />
       </div>
     </>
   );

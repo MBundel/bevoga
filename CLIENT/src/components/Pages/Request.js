@@ -14,8 +14,10 @@ import Submit from "../request-components/Submit";
 import SendStatus from "../request-components/SendStatus";
 import PersonalData2 from "../request-components/PersonalData2";
 import NecessaryApproval from "../request-components/NecessaryApproval";
+import emailjs from '@emailjs/browser';
 
-import { useState } from "react";
+
+import { useState , useRef } from "react";
 import { db } from "../../lib/init-firebase.js";
 import { collection, addDoc } from "firebase/firestore";
 
@@ -53,31 +55,53 @@ export default function Request() {
 
   const createRequester = async (event) => {
     event.preventDefault();
-    await addDoc(usersCollectionRef, {
-      formForRequestData: formForRequestData,
-      whatsappPermission: newsletterWA,
-      emailPermission:    newsletterMail,
-      insurable:          possibility,
-      membership:         membership,
-      company:            company,
-      insuredSum:         insuredSum,
-      bruttoIncome:       brutto,
-      FinalPrice:         price,
-      whiteCollar:        whiteCollar,
-      personalInfos:      personalInfos,
-      personalData:       personalData,
-      personalData2:      personalData2,
-      necessaryApproval:  necessaryApproval
-     
-    });
+    await addDoc(usersCollectionRef, fullForm);
   };
+
+// ---------- FORM ------------
+let fullForm = {
+  formForRequestData: formForRequestData,
+  whatsappPermission: newsletterWA,
+  emailPermission:    newsletterMail,
+  insurable:          possibility,
+  membership:         membership,
+  company:            company,
+  insuredSum:         insuredSum,
+  bruttoIncome:       brutto,
+  FinalPrice:         price,
+  whiteCollar:        whiteCollar,
+  personalInfos:      personalInfos,
+  personalData:       personalData,
+  personalData2:      personalData2,
+  necessaryApproval:  necessaryApproval
+ 
+}  
+
+//----------------- Send EMail function ------------
+
+
+
+const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.send('BevogaBesteatigungsMail', 'template_fbzqxpi', fullForm, 'Qp969SYEVhnBfwmCg')
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+    console.log(formForRequestData)
+  }
+
 
  // --------------- show and hide forms -----------
   const [showBuSumCalculator, setShowBuSumCalculator]         = useState(false)
-  const [showFormForRequest, setShowFormForRequest]           = useState(true)
+  const [showFormForRequest, setShowFormForRequest]           = useState(false)
   const [showGkvOptions, setShowGkvOptions]                   = useState(false)
   const [showNecessaryApproval, setShowNecessaryApproval]     = useState(false)
-  const [showPermission, setShowPermission]                   = useState(false)
+  const [showPermission, setShowPermission]                   = useState(true)
   const [showPersonalData, setShowPersonalData]               = useState(false)
   const [showPersonalData2, setShowPersonalData2]             = useState(false)
   const [showPersonalInformation, setShowPersonalInformation] = useState(false)
@@ -204,8 +228,10 @@ export default function Request() {
                onClick={ async(event) =>{
                
                  setShowSubmit(false)
-                 await createRequester(event)
+                 sendEmail(event)
+                 await createRequester(event)                 
                  setShowResult(true)
+                 console.log(fullForm)
 
                }}>
                  Abschicken
@@ -216,7 +242,10 @@ export default function Request() {
         {/* ------------------------------------------------------------------------- */}
             {showResult?(<SendStatus/>):null} 
         
+      
 
+            
+            
             
       </div>
        

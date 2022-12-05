@@ -4,7 +4,7 @@ import InitializeReactGA from "./components/helper/googleAnalytics";
 import CookieConsent from "react-cookie-consent";
 import axios from "axios";
 import {
-  BrowserRouter as Router,
+  Router,
   Routes,
   Route,
   useLocation,
@@ -36,6 +36,8 @@ import ProBevoga                  from "./components/Pages/blog-pages/ProBevoga"
 import GuenstigeBU                from "./components/Pages/blog-pages/GuenstigeBU";
 import KeineNormalannahme         from "./components/Pages/blog-pages/keineNormalannahme";
 import ChronischeKrankheiten      from "./components/Pages/blog-pages/chronischeKrankheiten";
+import BuSinnvoll                 from "./components/Pages/blog-pages/BuSinnvoll";
+
 
 //homepeage- modules
 import Navbar                     from "./components/Navbar";
@@ -63,11 +65,12 @@ function App() {
 
   return (
     <>
-      <Router>
+     
+        
         <Navbar />
         <Routes>
           <Route path="/"                            element={<Home                          />} />
-          <Route path="/abouts"                      element={<AboutUs                       />} />
+          <Route path="/aboutus"                     element={<AboutUs                       />} />
           <Route path="/contact"                     element={<Contact                       />} />
           <Route path="/infos"                       element={<Infos                         />} />
           <Route path="/request"                     element={<Request                       />} />
@@ -85,12 +88,13 @@ function App() {
           <Route path="/ProBevoga"                   element={<ProBevoga                     />} />
           <Route path="*"                            element={<Error                         />} />
           <Route path="/GuenstigeBU"                 element={<GuenstigeBU                   />} />
-          <Route path="/keineNormalannahme"          element={<KeineNormalannahme            />} />
+          <Route path="/KeineNormalannahme"          element={<KeineNormalannahme            />} />
           <Route path="/chronischeKrankheiten"       element={<ChronischeKrankheiten         />} />
+          <Route path="/BuSinnvoll"                  element={<BuSinnvoll                    />} />
         </Routes>
         <ContactNow />
         <Footer />
-      </Router>
+      {/* </Router> */}
       <CookieConsent
         location="bottom"
         buttonText="Alles klar!"

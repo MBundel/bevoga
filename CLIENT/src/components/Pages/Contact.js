@@ -71,7 +71,7 @@ export default function Contact() {
           className="contactLink"
           target="_blank"
           rel="noreferrer"
-          href="https://www.termininfo.net/fimdeu/berufsunfaehigkeitsversicherung"
+          href=" https://www.termininfo.net/fimdeu/bevoga"
         >
           Online-Termin
         </a>

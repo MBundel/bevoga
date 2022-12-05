@@ -62,5 +62,16 @@
 
 .request-footer-moreButton{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+@media (max-width: 700px) {
+
+    .request-container{
+        width: 95%; 
+    }
+
+
 }
