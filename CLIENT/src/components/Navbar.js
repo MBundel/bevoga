@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./css/Navbar.css";
+import "../css/Navbar.css";
 
 import {GiHamburgerMenu} from "react-icons/gi"
 
@@ -37,8 +37,8 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/request" className="nav-links" onClick={closeMobileMenu}>
-                Zum Antrag
+              <Link to="/request" className="nav-links" reloadDocument onClick={closeMobileMenu}>
+                Angebot/Antrag
               </Link>
             </li>
             <li className="nav-item">

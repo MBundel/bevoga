@@ -1,11 +1,10 @@
 import React from "react";
+
 import { useState, useEffect } from "react";
-import { db } from "../../lib/init-firebase.js";
-import { collection, addDoc } from "firebase/firestore";
 
-import "../../css/Button.css";
+import FormForRequest from "../request-components/FormForRequest"
 
-const Form = (props) => {
+function FastLane(props) {
   //firebase create user
 
   const [newFirstName, setNewFirstName] = useState("");
@@ -13,17 +12,10 @@ const Form = (props) => {
   const [newNumber, setNewNumber] = useState(0);
   const [newMail, setNewMail] = useState(0);
 
-  const usersCollectionRef = collection(db, "requester");
 
-  const createUser = async (event) => {
-    event.preventDefault();
-    await addDoc(usersCollectionRef, {
-      firstName: newFirstName,
-      lastName: newLastName,
-      phone: newNumber,
-      email: newMail,
-    });
-  };
+
+ 
+ 
 
   // button able/disable
   const [deactivateButton, setDeactivateButton] = useState(true);
@@ -72,13 +64,7 @@ const Form = (props) => {
     } else if (!/\S+@\S+\.\S+/.test(values.email)) {
       errors.email = "Email-Adresse ist ungültig";
     }
-    if (!values.phone) {
-      errors.phone = "Telefonnummer bitte angeben";
-    } else if (
-      !/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$/g.test(values.phone)
-    ) {
-      errors.phone = "Format ist ungültig";
-    }
+    
     if (!values.firstName.trim()) {
       errors.firstName = "Bitte Namen eintragen";
     }
@@ -145,7 +131,7 @@ const Form = (props) => {
             checkInput(event);
           }}
         />
-        {errors.phone && <p>{errors.phone}</p>}
+       
         
         <input
           type="email"
@@ -163,16 +149,7 @@ const Form = (props) => {
 
        {/* ------------------------ Button Footer ----------------------- */}
         <div className="request-footer-moreButton">
-          <button
-            className="btn btn-transparent"
-            onClick={(event) => {
-              event.preventDefault();
-              props.sendShowOwn(false);
-              props.sendShowLast(true);
-            }}
-          >
-            Zurück
-          </button>
+         
           <button
             className="btn btn-transparent"
             onClick={(event) => {
@@ -181,12 +158,11 @@ const Form = (props) => {
             }}
             disabled={deactivateButton}
           >
-            Weiter
+            Angebot einholen
           </button>
         </div>
       </form>
     </div>
   );
 };
-
-export default Form;
+export default FastLane;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Erstinformation from "../documents/erstinformation.pdf";
 // CSS
-import "./css/Footer.css";
+import "../css/Footer.css";
 
 //ICONS
 import { AiOutlineInstagram } from "react-icons/ai";
@@ -14,6 +14,7 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 function Footer() {
   return (
     <div className="footer-container visible">
+      
       <div className="footer-box">
         <div className="footer-links">
           <Link target="_blank" rel="noreferrer" to="/impressum">
@@ -36,6 +37,7 @@ function Footer() {
           </Link>
         </div>
       </div>
+     
       <div className="footer-sm">
         <a
           target="_blank"
@@ -56,7 +58,7 @@ function Footer() {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://twitter.com/fimdeu_bevoga"
+          href="https://twitter.com/bevoga_fimdeu"
         >
           {" "}
           <AiOutlineTwitter size={40} />

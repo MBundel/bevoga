@@ -1,13 +1,14 @@
 // import
-import React from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
 import { db } from "../../lib/init-firebase.js";
 import { collection, addDoc } from "firebase/firestore";
+import emailjs from '@emailjs/browser';
 
 
 // import Css
 
-import "../css/Button.css";
+import "../../css/Button.css";
 
 const Form = (props) => {
 
@@ -22,13 +23,32 @@ const Form = (props) => {
 
   const createUser = async (event) => {
     event.preventDefault();
-    await addDoc(usersCollectionRef, {
-      firstName: newFirstName,
-      lastName: newLastName,
-      phone: newNumber,
-      email: newMail,
-    });
+    await addDoc(usersCollectionRef, filledForm );
   };
+
+  //-------- form --------------
+
+  const filledForm = {
+    firstName: newFirstName,
+    lastName: newLastName,
+    phone: newNumber,
+    email: newMail,
+  }
+
+  //----------------- Send EMailJS function ------------
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.send('default_service', 'template_e3flt9o', filledForm, 'Qp969SYEVhnBfwmCg')
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+    console.log('jup')
+  }
 
   // button able/disable
     const [deactivateButton, setDeactivateButton] = useState(false);
@@ -156,7 +176,8 @@ const Form = (props) => {
             <button
               className="btn btn-transparent"
               onClick={(event) => {
-                handleSubmit(event);      
+                handleSubmit(event);
+                sendEmail(event)      
               }}
               disabled={deactivateButton}
             >
@@ -165,7 +186,7 @@ const Form = (props) => {
           </form>
         </div>
       ) : null}
-      {!show ? <div> Erfolgreich abgeschickt! </div> : null}
+      {!show ? <div className="centered"> <p> Erfolgreich abgeschickt!  <br /> Bestätigungsmail ist unterwegs</p> </div> : null}
     </div>
   );
 }

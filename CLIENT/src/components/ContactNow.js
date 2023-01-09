@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-import "./css/ContactNow.css";
-import "./css/Icons.css";
+import "../css/ContactNow.css";
+import "../css/Icons.css";
 
 import { MdOutlineContactSupport } from "react-icons/md";
 import { TbFileCertificate } from "react-icons/tb";

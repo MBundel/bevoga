@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./css/Characteristic.css";
+import "../css/Characteristic.css";
 
 const Characteristics = (props) => {
   return (

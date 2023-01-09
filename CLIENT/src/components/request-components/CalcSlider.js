@@ -1,14 +1,18 @@
 import * as priceCalculationWhiteCollar from "../../records/PriceCalculation.js";
 import React, { useState, useEffect } from "react";
 
+
 import { RiQuestionnaireLine } from "react-icons/ri";
 
-import "../css/MainPages.css";
-import "../css/CalcSlider.css";
+import "../../css/MainPages.css";
+import "../../css/CalcSlider.css";
 
   //-------------------------- useEffect -------------------------------
 
 function CalcSlider() {
+
+
+
   const [sumInsured, setSumInsured] = useState(1000);
   const [ageInsured, setAgeInsured] = useState(40);
   const [showCalc, setShowCalc] = useState(true);
@@ -276,6 +280,7 @@ function CalcSlider() {
             </div>
           </div>
         </div>
+        <button className="btn btn-white">Angebot einholen</button>
       </div>
     </>
   );

@@ -1,0 +1,40 @@
+Updates per Mail	{{emailPermission}}
+Updates per WhatsApp	{{whatsappPermission}}
+Vorname	{{formForRequestData.firstName}}
+Nachname	{{formForRequestData.lastName}}
+Telefonnummer	{{formForRequestData.phone}}
+Email-Adresse	{{formForRequestData.email}}
+Whitecollar	{{whiteCollar}}
+Zu zahlender Beitrag	{{FinalPrice}}
+Bruttoeinkommen	{{bruttoIncome}}
+Absicherunghöhe	{{insuredSum}}
+(wechsel zu GKV-Partner)	{{company}}
+(bereits Mitglied)	{{membership}}
+Straße	{{personalInfos.streetAdress}}
+PLZ	{{personalInfos.postalCode}}
+Stadt	{{personalInfos.city}}
+Geschlecht	{{personalInfos.sex}}
+Geburtsort	{{personalInfos.birthPlace}}
+Geburtsname	{{personalInfos.birthName}}
+Geburtstag	{{personalInfos.birthday}}
+Staatsangehörigkeit	{{personalInfos.country}}
+Familienstand	{{personalInfos.family}}
+Versichertennummer	{{personalInfos.insuranceID}}
+Beruf	{{personalData2.jobTitle}}
+Berufsbeginn	{{personalData2.jobBegin}}
+IBAN	{{personalData2.IBAN}}
+BIC	{{personalData2.BIC}}
+Bankname	{{personalData2.bank}}
+
+
+Daten für den Krankenkassenwechsel:
+
+Arbeitsverhältnis	{{personalData.employment}}
+Name Arbeitgeber	{{personalData.nameAG}}
+Straße + Nummer Arbeitgeber	{{personalData.adressAG}}
+PLZ + Ort Arbeitgeber	{{personalData.plzAG}}
+Anzahl weiterer versicherter Personen	{{personalData.insuredFamilyMember}}
+Art der Vorversicherung	{{personalData.kindOfprevInsured}}
+Vorherige Krankenvers.	{{personalData.prevInsured}}
+Versicherungsstatus	{{personalData.statusGKV}}
+Versicherungsbeginn	{{personalData.startGKV}}

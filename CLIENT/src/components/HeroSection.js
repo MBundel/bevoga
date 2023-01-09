@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import Form from "./request-components/Form";
 
 
-import "./css/HeroSection.css";
-import "./css/Icons.css";
+import "../css/HeroSection.css";
+import "../css/Icons.css";
 
 function Herosection() {
   return (

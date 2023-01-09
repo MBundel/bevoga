@@ -8,8 +8,8 @@ import * as priceCalculationWhiteCollar from "../../records/PriceCalculation.js"
 import React, { useState, useEffect } from "react";
 
 // css import
-import "../css/MainPages.css";
-import "../css/CalcSlider.css";
+import "../../css/MainPages.css";
+import "../../css/CalcSlider.css";
 
 // MUI import
 

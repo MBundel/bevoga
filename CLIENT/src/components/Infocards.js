@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-import "./css/Infocards.css";
+import "../css/Infocards.css";
 
 import { GoInfo } from "react-icons/go";
 // import { MdUnfoldMore } from "react-icons/md";

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./css/Table.css";
+import "../css/Table.css";
 
 function Table({ list, colNames, pageNum = 0, pageSize = 100 }) {
   const [page] = useState(pageNum);
