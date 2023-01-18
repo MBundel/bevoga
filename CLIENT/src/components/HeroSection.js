@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Form from "./request-components/Form";
 
 
+// CSS import
 import "../css/HeroSection.css";
 import "../css/Icons.css";
 
@@ -80,14 +80,7 @@ function Herosection() {
           {/* Container Ende */}
         </div>
         <div className="space"></div>
-        <div className="hero-sub">
-          <Form 
-          group="subscriber"
-          header1="Nichts mehr verpassen"
-          header2="und alle Updates erfahren!"
-          button="Abschicken"
-          />
-        </div>
+       
         <div className="space"></div>
       
     </div>

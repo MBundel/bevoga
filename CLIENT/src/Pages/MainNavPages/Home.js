@@ -4,6 +4,7 @@ import * as infoContent from "../../records/InfoCardsContent.js";
 import HeroSection from "../../components/HeroSection";
 import Infocards from "../../components/Infocards";
 import CalcSlider from "../../components/request-components/CalcSlider.js";
+import Form from "../../components/request-components/Form.js";
 
 import { Button } from "../../components/Button.js";
 import { Helmet } from "react-helmet-async";
@@ -53,9 +54,18 @@ function Home() {
           <Button
             path="/request"
             class="btn-middle btn-transparent btn"
-            text="zum Antrag"
+            text="zum Antrag/ Angebot"
           />
         </div>
+      </div>
+      <div className="space"></div>
+      <div className="hero-sub">
+        <Form
+          group="subscriber"
+          header1="Nichts mehr verpassen"
+          header2="und alle Updates erfahren!"
+          button="Abschicken"
+        />
       </div>
     </>
   );

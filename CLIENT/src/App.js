@@ -32,6 +32,8 @@ import GuenstigeBU                from "./Pages/UnderPagesBlog/GuenstigeBU";
 import KeineNormalannahme         from "./Pages/UnderPagesBlog/keineNormalannahme";
 import ChronischeKrankheiten      from "./Pages/UnderPagesBlog/chronischeKrankheiten";
 import BuSinnvoll                 from "./Pages/UnderPagesBlog/BuSinnvoll";
+import BuRente                    from "./Pages/UnderPagesBlog/BuRente";
+import Grundfaehigkeistvers       from "./Pages/UnderPagesBlog/grundfaehigkeistvers";
 
 //UnderPagesInfos
 import WhatsaBu                   from "./Pages/UnderPagesInfos/WhatsaBu";
@@ -98,6 +100,8 @@ function App() {
           <Route path="/KeineNormalannahme"          element={<KeineNormalannahme            />} />
           <Route path="/chronischeKrankheiten"       element={<ChronischeKrankheiten         />} />
           <Route path="/BuSinnvoll"                  element={<BuSinnvoll                    />} />
+          <Route path="/BuRente"                     element={<BuRente                       />} />
+          <Route path="/Grundfaehigkeistvers"        element={<Grundfaehigkeistvers          />} />
         </Routes>
         </React.Suspense>
         <ContactNow />

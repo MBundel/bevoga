@@ -25,6 +25,8 @@ import { GoChecklist } from "react-icons/go";
 import { MdSick } from "react-icons/md";
 import { GiThink } from "react-icons/gi";
 import { RiErrorWarningFill } from "react-icons/ri";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { GiPiercedBody } from "react-icons/gi";
 
 export default function Infos() {
   const infocardData = [
@@ -107,10 +109,22 @@ export default function Infos() {
       link: "/BuSinnvoll",
     },
     {
-      id: 13,
+      id: 14,
       icon: <RiErrorWarningFill size={100} />,
       text: "Keine Normalannahme",
       link: "/keineNormalannahme",
+    },
+    {
+      id: 15,
+      icon: <GiTakeMyMoney size={100} />,
+      text: "Bu-Rente",
+      link: "/BuRente",
+    },
+    {
+      id: 16,
+      icon: <GiPiercedBody size={100} />,
+      text: "Grundfähigkeit",
+      link: "/grundfaehigkeistvers",
     },
     // hier über einfügen
   ];

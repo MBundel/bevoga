@@ -280,7 +280,7 @@ function CalcSlider() {
             </div>
           </div>
         </div>
-        <button className="btn btn-white">Angebot einholen</button>
+        {/* <button className="btn btn-white">Angebot einholen</button> */}
       </div>
     </>
   );

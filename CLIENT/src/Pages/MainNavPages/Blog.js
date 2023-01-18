@@ -10,6 +10,8 @@ import { GoChecklist } from "react-icons/go";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { MdSick } from "react-icons/md";
 import { GiThink } from "react-icons/gi";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { GiPiercedBody } from "react-icons/gi";
 
 function Blog() {
   const data = [
@@ -48,6 +50,18 @@ function Blog() {
       header: "ist eine BU sinnvoll?",
       text: "Hier schauen wir uns an, wann eine BU sinn ergibt und für wen sie geeignet ist.",
       link: "/BuSinnvoll",
+    },
+    {
+      icon: <GiTakeMyMoney size={160} />,
+      header: "BU-Rente",
+      text: "Alle Fragen zur BU-Rente werden hier beantwortet: wann, wie, was & Steuern",
+      link: "/BuRente",
+    },
+    {
+      icon: <GiPiercedBody size={160} />,
+      header: "Grundfähigkeitsvers.",
+      text: "Grundfähigkeitsversicherung vs Berufsunfähigkeitsversicherung ",
+      link: "/grundfaehigkeistvers",
     },
   ];
 
