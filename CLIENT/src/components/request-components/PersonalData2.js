@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 
-import { Checkbox } from "@mui/material";
-import { green } from "@mui/material/colors";
-import { red } from "@mui/material/colors";
-
 function PersonalData2(props) {
-  const [disabeld, setDisabeld] = useState();
-  const [type, setType] = useState("text")
+  const [type, setType] = useState("text");
   const [values, setValues] = useState({
     jobTitle: "",
     jobBegin: "",
@@ -16,8 +11,8 @@ function PersonalData2(props) {
     contactKK: false,
     perusal: false,
   });
-//--------------------handle Change ----------------------
-//handleChange Input
+  //--------------------handle Change ----------------------
+  //handleChange Input
   const handleChange = (e) => {
     const { name, value } = e.target;
     setValues({
@@ -25,13 +20,12 @@ function PersonalData2(props) {
       [name]: value,
     });
   };
-// handle Type Change
-const handleType = () => {
-  setType("date")
-}
+  // handle Type Change
+  const handleType = () => {
+    setType("date");
+  };
 
-
-// ------------------------- HTML CODE -----------------------
+  // ------------------------- HTML CODE -----------------------
   return (
     <>
       <form action="">
@@ -44,7 +38,7 @@ const handleType = () => {
             placeholder=" Name der beruflichen Tätigkeit"
           />
           <input
-          onClick={handleType}
+            onClick={handleType}
             onChange={handleChange}
             name="jobBegin"
             value={values.jobBegin}
@@ -75,66 +69,7 @@ const handleType = () => {
             placeholder="Bankname"
           />
         </div>
- {/* ------------------- CheckBox DIV -----------------------------   */}
-        {/* <div className="checkbox-div"> */}
-          {/* ----------- CheckBox -----------------   */}
-        {/* <div>
-            <div>
-                <Checkbox
-                  sx={{
-                    color: red[200],
-                    "&.Mui-checked": {
-                      color: green[800],
-                    },
-                  }}
-                  
-                />
-              </div>
-              <div>
-                <p>
-                  Ich willige ein, dass die Krankenkasse mich kontaktieren darf.
-                </p>
-              </div>
-            </div> */}
-          {/* ----------- CheckBox -----------------   */}
-        {/* <div>
-            <div>
-                <Checkbox
-                  sx={{
-                    color: red[200],
-                    "&.Mui-checked": {
-                      color: green[800],
-                    },
-                  }}
-                  
-                />
-              </div>
-              <div>
-                <p>
-                Kenntnisnahme: Die Erhebung der persönlichen Daten ist aufgrund der §§ 206 und 284 Sozialgesetzbuch Fünftes Buch (SGB V) in Verbindung mit § 21 SGB Zehntes Buch (SGB X) zur rechtmäßigen Erfüllung unserer Aufgaben erforderlich. Der Schutz der Sozialdaten nach den Vorschriften des SGB X sowie der DS-GVO (Datenschutzgrundverordnung) ist gewährleistet.
-                </p>
-              </div>
-            </div> */}
-          {/* ----------- CheckBox -----------------   */}
-        {/* <div>
-            <div>
-                <Checkbox
-                  sx={{
-                    color: red[200],
-                    "&.Mui-checked": {
-                      color: green[800],
-                    },
-                  }}
-                  
-                />
-              </div>
-              <div>
-                <p>
-                    Ich erteile ein SEPA-Mandat zur Abbuchung des Mitgliedschaftsbeitrages 
-                </p>
-              </div>
-            </div>
-        </div> */}
+        {/* ------------------- CheckBox DIV -----------------------------   */}
       </form>
       {/* -------------------- Footer -------------------- */}
       <div className="checkbox-div ">
@@ -154,7 +89,6 @@ const handleType = () => {
           {/* -------------------- Button Next -------------------- */}
           <button
             className="btn btn-transparent"
-            disabled={disabeld}
             onClick={() => {
               props.sendShowNext(true);
               props.sendShowOwn(false);

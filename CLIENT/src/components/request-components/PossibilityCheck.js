@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback  } from "react";
 import { Link } from "react-router-dom";
 import Anzeigepflichtverletzung from '../../documents/Anzeigepflichtverletzung.pdf';
 
@@ -50,9 +50,10 @@ function PossibilityCheck(props) {
     
   };
 
-  // enable/disable Button
+// --------------- Enable/Disable Button NEXT -----------------------
+  const handleButtonState = useCallback(() => {
 
-  const handleButtonState = () => {
+    
     if (
       status === "true" &&
       insurance === "true" &&
@@ -68,7 +69,23 @@ function PossibilityCheck(props) {
       setButtonState(true);
     }
     showInfoText();
-  };
+  }, [
+    status,
+    insurance,
+    angabenCheck,
+    gesundheitsfrage1,
+    gesundheitsfrage2,
+    gesundheitsfrage3,
+    gesundheitsfrage4,
+    gesundheitsfrage5,
+    showInfoText
+  ]);
+
+  useEffect(() => {
+    handleButtonState();
+  }, [handleButtonState]);
+
+
 
   // long way handleChange of checkboxes
   const handleChange1 = () => {
@@ -101,18 +118,7 @@ function PossibilityCheck(props) {
     handleButtonState();
     
   };
-  // handle Change short
-  //
-  // const handleChange = (e) => {
-  //   setValues((prevState) => {
-  //     const [name] = e.target
-  //     return{
-  //       ...prevState,
-  //       [name]: !prevState[name]
 
-  //     }})
-  //     handleButtonState()
-  //   }
 
   // handle change of radio status and insurancy
   // status radio
@@ -128,20 +134,7 @@ function PossibilityCheck(props) {
     
   };
 
-  // --------------------- useEffect -------------------------
-  useEffect(() => {
-    handleButtonState();
-  }, [
-    gesundheitsfrage1,
-    gesundheitsfrage2,
-    gesundheitsfrage3,
-    gesundheitsfrage4,
-    gesundheitsfrage5,
-    angabenCheck,
-    infoText,
-    status,
-    insurance,
-  ]);
+
 
   return (
     <div>

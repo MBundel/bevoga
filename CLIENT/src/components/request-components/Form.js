@@ -1,8 +1,6 @@
 // import
 import React, { useRef } from "react";
 import { useState } from "react";
-import { db } from "../../lib/init-firebase.js";
-import { collection, addDoc } from "firebase/firestore";
 import emailjs from '@emailjs/browser';
 
 
@@ -19,11 +17,25 @@ const Form = (props) => {
   const [newNumber, setNewNumber] = useState(0);
   const [newMail, setNewMail] = useState(0);
 
-  const usersCollectionRef = collection(db, props.group);
+  
+  const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:5000/create' : 'http://bevogabeanstalk-env.eba-wfpdniin.eu-central-1.elasticbeanstalk.com/create';
 
-  const createUser = async (event) => {
-    event.preventDefault();
-    await addDoc(usersCollectionRef, filledForm );
+  const handleSubmitSERVER = () => {
+    fetch(baseURL , {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(filledForm),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("success", data);
+      })
+      .catch((err) => {
+        console.log("rejected", err);
+      });
   };
 
   //-------- form --------------
@@ -107,7 +119,7 @@ const Form = (props) => {
       // sucsessful submit      
     if (isValid) {
       setDeactivateButton(true);
-      await createUser(event);
+      await handleSubmitSERVER();
       console.log('nach event');
       setDeactivateButton(false);
       setShow(false);

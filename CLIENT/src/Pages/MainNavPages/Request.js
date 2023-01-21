@@ -21,8 +21,8 @@ import Options                from "../../components/request-components/Options"
 import FastLane               from "../../components/request-components/FastLane";
 
 
-import { db } from "../../lib/init-firebase.js";
-import { collection, addDoc } from "firebase/firestore";
+// import { db } from "../../lib/init-firebase.js";
+// import { collection, addDoc } from "firebase/firestore";
 
 import "../../css/MainPages.css";
 import "../../css/Request.css";
@@ -56,11 +56,30 @@ export default function Request() {
   const [activateFastLane, setActivateFastLane]= useState(false)
 
 
-  const usersCollectionRef = collection(db, "requester");
+  // const usersCollectionRef = collection(db, "requester");
 
-  const createRequester = async (event) => {
-    event.preventDefault();
-    await addDoc(usersCollectionRef, fullForm);
+  // const createRequester = async (event) => {
+  //   event.preventDefault();
+  //   await addDoc(usersCollectionRef, fullForm);
+  // };
+  const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:5000/create' : 'http://bevogabeanstalk-env.eba-wfpdniin.eu-central-1.elasticbeanstalk.com/create';
+
+  const handleSubmit = () => {
+    fetch(baseURL , {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(fullForm),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("success", data);
+      })
+      .catch((err) => {
+        console.log("rejected", err);
+      });
   };
 
 // ---------- FORM ------------
@@ -253,10 +272,11 @@ const form = useRef();
                
                  setShowSubmit(false)
                  sendEmail(event)
-                 await createRequester(event)                 
-                 setShowResult(true)
+                //  await createRequester(event)                 
+                
+                 await handleSubmit()
+                  setShowResult(true)
                  console.log(fullForm)
-
                }}>
                  Abschicken
                </button>

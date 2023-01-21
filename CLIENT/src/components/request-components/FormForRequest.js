@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { db } from "../../lib/init-firebase.js";
-import { collection, addDoc } from "firebase/firestore";
+// import { db } from "../../lib/init-firebase.js";
+// import { collection, addDoc } from "firebase/firestore";
 
 import "../../css/Button.css";
 
@@ -13,17 +13,17 @@ const Form = (props) => {
   const [newNumber, setNewNumber] = useState(0);
   const [newMail, setNewMail] = useState(0);
 
-  const usersCollectionRef = collection(db, "requester");
+  // const usersCollectionRef = collection(db, "requester");
 
-  const createUser = async (event) => {
-    event.preventDefault();
-    await addDoc(usersCollectionRef, {
-      firstName: newFirstName,
-      lastName: newLastName,
-      phone: newNumber,
-      email: newMail,
-    });
-  };
+  // const createUser = async (event) => {
+  //   event.preventDefault();
+  //   await addDoc(usersCollectionRef, {
+  //     firstName: newFirstName,
+  //     lastName: newLastName,
+  //     phone: newNumber,
+  //     email: newMail,
+  //   });
+  // };
 
   // button able/disable
   const [deactivateButton, setDeactivateButton] = useState(true);

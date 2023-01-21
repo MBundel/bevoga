@@ -1,8 +1,7 @@
 
 import React, { useState } from "react";
 
-import { Checkbox } from "@mui/material";
-import { green, red } from "@mui/material/colors";
+
 
 
 function PersonalData(props) {
@@ -85,7 +84,7 @@ const handleButton = () => {
       
             id="previous_insurance"
             data-validation-rules="required|max:127"
-            class="form-control required"
+            className="form-control required"
           >
             <option value="default">Vorherige Krankenversicherung</option>
             <option value="actimonda krankenkasse">
