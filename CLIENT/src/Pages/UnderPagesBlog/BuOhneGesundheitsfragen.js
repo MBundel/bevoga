@@ -8,7 +8,7 @@ function BuOhneGesundheitsfragen() {
   return (
     <>
       <Helmet>
-        <title>Berufsunfähigkeitsversicherung trotz Psychotheraphie</title>
+        <title>Berufsunfähigkeitsversicherung ohne Gesundheitsfragen</title>
         <meta
           name="description"
           content="Berufsunfähigkeitsversicherung Bu ohne Gesundheitsfragen und Prüfung"
@@ -27,8 +27,8 @@ function BuOhneGesundheitsfragen() {
         className="background-img"
       />
       <div className="centered  box-transparent blog">
-        <h1>Berufsunfähigkeitsversicherung ohne Gesundheitsfragen?</h1>
-        <h2>Wie kann es eine BU ohne Gesundheitsprüfung geben?</h2>
+        <h1>Berufsunfähigkeitsversicherung ohne Gesundheitsfragen!</h1>
+        <h2>Wie kann es unsere BU ohne Gesundheitsprüfung geben?</h2>
         <p>
           Jede klassische Berufsunfähigkeitsversicherung (BU) verlangt
           Gesundheitsfragen, - unsere nicht. Aber wieso ist das so? In diesem

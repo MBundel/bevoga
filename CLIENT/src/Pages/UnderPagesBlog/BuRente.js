@@ -7,15 +7,15 @@ function ProBevoga() {
   return (
     <>
       <Helmet>
-        <title>Wann ist bevoga die bessere Bu für dich ist</title>
+        <title>Bu Rente - was gilt zu beachten</title>
         <meta
           name="description"
-          content=" bevoga, Gründe für die BU ohne Fragen zur Gesundheit"
+          content=" bevoga, Gründe für die BU ohne Fragen zur Gesundheit, Bu Prüfung, Gesundheitsfragen Bu Rente, Berufsunfähigkeitsversicherungsrente berufsunfähigkeitsrente bu rente"
         />
         <link rel="canonical" href="/bevoga" />
         <meta
           name="keywords"
-          conent="Berufsunfähigkeitsversicherung ohne Gesundheitsfragen, Bu ohne Gesundheitsprüfung, Bu Prüfung, Gesundheitsfragen Bu-Rente, Berufsunfähigkeitsversicherungsrente "
+          conent="Berufsunfähigkeitsversicherung ohne Gesundheitsfragen, Bu ohne Gesundheitsprüfung, Bu Prüfung, Gesundheitsfragen Bu Rente, Berufsunfähigkeitsversicherungsrente berufsunfähigkeitsrente bu rente "
         />
       </Helmet>
 
@@ -26,6 +26,7 @@ function ProBevoga() {
         className="background-img"
       />
       <div className="centered  box-transparent blog">
+        
         <h1>Berufsunfähigkeitsrente</h1>
         <h2>Was muss ich über die BU-Rente wissen?</h2>
         <p>
@@ -95,7 +96,8 @@ function ProBevoga() {
             eine günstige Lösung finden.
           </a>
         </p>
-        <h3>Wie wird eine BU-Rente besteuert?</h3>
+        
+        <h3 id="WieWirdEineBuRenteBesteuert">Wie wird eine BU-Rente besteuert?</h3>
         <p>
           Bei der Steuererklärung gilt die BU-Rente als sonstiges Einkommen.
           Generell gibt es den Steuerfreibetrag von ca. 10.000e im Jahr. Das

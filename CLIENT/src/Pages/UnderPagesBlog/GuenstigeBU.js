@@ -8,7 +8,7 @@ function BuOhneGesundheitsfragen() {
   return (
     <>
       <Helmet>
-        <title>Berufsunfähigkeitsversicherung trotz Psychotheraphie</title>
+        <title>Warum unsere  Berufsunfähigkeitsversicherung BU günstig ist.</title>
         <meta
           name="description"
           content="Was darf eine Berufsunfähigkeitsversicherung kosten? Berufsunfähigkeitsversicherung Bu günstig fur Handwerrker und CO"

@@ -8,7 +8,7 @@ function ProBevoga() {
   return (
     <>
       <Helmet>
-        <title>Wann ist bevoga die bessere Bu für dich ist</title>
+        <title> Was eine Normalannahme bei einer BU ist und welche Optionen zur Verfügung stehen</title>
         <meta
           name="description"
           content=" Berufsunfähigkeitsversicherung, Normalannahme, Zuschlag, Ausschluss, Ablehnung"

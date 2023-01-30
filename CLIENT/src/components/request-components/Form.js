@@ -1,15 +1,13 @@
 // import
 import React, { useRef } from "react";
 import { useState } from "react";
-import emailjs from '@emailjs/browser';
-
+import emailjs from "@emailjs/browser";
 
 // import Css
 
 import "../../css/Button.css";
 
 const Form = (props) => {
-
   //firebase create user
 
   const [newFirstName, setNewFirstName] = useState("");
@@ -17,11 +15,13 @@ const Form = (props) => {
   const [newNumber, setNewNumber] = useState(0);
   const [newMail, setNewMail] = useState(0);
 
-  
-  const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:5000/create' : 'http://bevogabeanstalk-env.eba-wfpdniin.eu-central-1.elasticbeanstalk.com/create';
+  const baseURL =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:5000/create"
+      : "http://bevogabeanstalk-env.eba-wfpdniin.eu-central-1.elasticbeanstalk.com/create";
 
   const handleSubmitSERVER = () => {
-    fetch(baseURL , {
+    fetch(baseURL, {
       method: "post",
       headers: {
         Accept: "application/json",
@@ -45,7 +45,7 @@ const Form = (props) => {
     lastName: newLastName,
     phone: newNumber,
     email: newMail,
-  }
+  };
 
   //----------------- Send EMailJS function ------------
   const form = useRef();
@@ -53,18 +53,27 @@ const Form = (props) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.send('default_service', 'template_e3flt9o', filledForm, 'Qp969SYEVhnBfwmCg')
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-    }, function(error) {
-       console.log('FAILED...', error);
-    });
-    console.log('jup')
-  }
+    emailjs
+      .send(
+        "default_service",
+        "template_e3flt9o",
+        filledForm,
+        "Qp969SYEVhnBfwmCg"
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+    console.log("jup");
+  };
 
   // button able/disable
-    const [deactivateButton, setDeactivateButton] = useState(false);
-    
+  const [deactivateButton, setDeactivateButton] = useState(false);
+
   // handle Input and update value/name
 
   const [values, setValues] = useState({
@@ -106,27 +115,24 @@ const Form = (props) => {
       errors.lastName = "Bitte Namen eintragen";
     }
     setErrors(errors);
- 
 
-    return JSON.stringify(errors) === JSON.stringify({})
+    return JSON.stringify(errors) === JSON.stringify({});
   }
   // handle submit
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-      //handle validation
+    //handle validation
     const isValid = validate();
-      // sucsessful submit      
+    // sucsessful submit
     if (isValid) {
       setDeactivateButton(true);
       await handleSubmitSERVER();
-      console.log('nach event');
+      console.log("nach event");
       setDeactivateButton(false);
       setShow(false);
     }
   };
-
-
 
   const [show, setShow] = useState(true);
 
@@ -135,10 +141,10 @@ const Form = (props) => {
   return (
     <div>
       {show ? (
-        <div>
+        <div style={{ width: "400px" }}>
           <div> {props.header1}</div>
           <div> {props.header2} </div>
-          <form>
+          {/* <form>
             <input
               type="text"
               placeholder="Dein Vorname"
@@ -195,12 +201,72 @@ const Form = (props) => {
             >
               {props.button}
             </button>
+          </form> */}
+          <form
+            action="https://app.getresponse.com/add_subscriber.html"
+            accept-charset="utf-8"
+            method="post"
+            style={{ width: "100%" }}
+          >
+            <input
+              type="text"
+              name="email"
+              placeholder="Deine Email-Adresse"
+              style={{ width: "100%" }}
+            />
+            <br />
+            <input
+              type="text"
+              name="first_name"
+              placeholder="Dein Vorname"
+              style={{ width: "100%" }}
+            />
+            <br />
+
+            <input
+              type="text"
+              name="last_name"
+              placeholder="Deine Nachname"
+              style={{ width: "100%" }}
+            />
+            <br />
+            <input
+              name="custom_weitere"
+              type="text"
+              placeholder="Deine Telefonnummer"
+              style={{ width: "100%" }}
+            />
+            <br />
+            <input type="hidden" name="campaign_token" value="QcaM4" />
+
+            <input
+              type="hidden"
+              name="thankyou_url"
+              value="https://www.bevoga.de/newsletter"
+            />
+
+            <input type="hidden" name="start_day" value="0" />
+
+            <input
+              type="submit"
+              value="Abschicken"
+              style={{ width: "100%" }}
+              className="btn btn-transparent"
+            />
           </form>
         </div>
       ) : null}
-      {!show ? <div className="centered"> <p> Erfolgreich abgeschickt!  <br /> Bestätigungsmail ist unterwegs</p> </div> : null}
+      {!show ? (
+        <div className="centered">
+          {" "}
+          <p>
+            {" "}
+            Erfolgreich abgeschickt! <br /> Bestätigungsmail ist unterwegs
+          </p>{" "}
+        </div>
+      ) : null}
     </div>
   );
-}
+};
 
 export default Form;

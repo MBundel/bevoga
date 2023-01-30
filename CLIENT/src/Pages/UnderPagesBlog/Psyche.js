@@ -7,7 +7,7 @@ function Psyche() {
   return (
     <>
       <Helmet>
-        <title>Berufsunfähigkeitsversicherung trotz Psychotheraphie</title>
+        <title>Berufsunfähigkeitsversicherung trotz Psychotheraphie, (BU psychotherapie)</title>
         <meta
           name="description"
           content="Wie du eine Berufsunfähigkeitsversicherung trotz Psychotherapie bekommst, Berufsunfähigkeitsversicherung ohne Gesundheitsfragen, 

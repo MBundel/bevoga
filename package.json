@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@beyonk/gdpr-cookie-consent-banner": "^9.1.1"
   }
 }

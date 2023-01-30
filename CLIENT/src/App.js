@@ -1,7 +1,8 @@
-import React from "react";
-import ReactGA from "react-ga";
-import InitializeReactGA from "./components/helper/googleAnalytics";
-import CookieConsent from "react-cookie-consent";
+import React              from "react";
+import ReactGA            from "react-ga";
+import InitializeReactGA  from "./components/helper/googleAnalytics";
+
+
 
 import {
   Routes,
@@ -45,11 +46,13 @@ import Concept                    from "./Pages/UnderPagesInfos/Concept";
 //UnshownPages
 import Error                      from "./Pages/UnshownPages/Error";
 import Test                       from "./Pages/UnshownPages/Test";
+import Newsletter                 from "./Pages/UnshownPages/Newsletter";
 
 //homepeage- modules
 import Navbar                     from "./components/Navbar";
 import ContactNow                 from "./components/ContactNow";
 import Footer                     from "./components/Footer";
+import Cookies                    from "./components/Cookies";
 
 // CSS
 import "./css/MainPages.css";
@@ -102,26 +105,15 @@ function App() {
           <Route path="/BuSinnvoll"                  element={<BuSinnvoll                    />} />
           <Route path="/BuRente"                     element={<BuRente                       />} />
           <Route path="/Grundfaehigkeistvers"        element={<Grundfaehigkeistvers          />} />
+          <Route path="/Newsletter"                  element={<Newsletter                    />} />
         </Routes>
         </React.Suspense>
         <ContactNow />
         <Footer />
-      {/* </Router> */}
-      <CookieConsent
-        location="bottom"
-        buttonText="Alles klar!"
-        cookieName="myAwesomeCookieName2"
-        style={{ backgroundColor: "#78B2DB" }}
-        buttonStyle={{
-          color: "black",
-          fontSize: "13px",
-          backgroundColor: "#f4a89f",
-        }}
-        expires={150}
-      >
-        Wir nutzen Cookies.{" "}
-        <span style={{ fontSize: "10px" }}>So wie jede Seite :)</span>
-      </CookieConsent>
+             
+      
+      
+      
     </>
   );
 }

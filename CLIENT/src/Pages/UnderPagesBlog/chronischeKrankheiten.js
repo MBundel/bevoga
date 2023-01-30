@@ -8,7 +8,7 @@ function chronischeKrankheiten() {
   return (
     <>
       <Helmet>
-        <title>Wann ist bevoga die bessere Bu für dich ist</title>
+        <title>Berufsunfähigkeitsversicherung  und chronische Krankheiten</title>
         <meta
           name="description"
           content="Bu Absicherung trotz chronishcer Krankheit"

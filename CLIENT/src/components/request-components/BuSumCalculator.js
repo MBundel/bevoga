@@ -1,6 +1,6 @@
 // TASKS:
 // maxIncome in function use State als Obj und reduzieren der codes
-// bug: IKK und 90% whitecollar  1.82€ -> -MinusZahl -> Null
+
 
 // import
 
@@ -167,14 +167,7 @@ function BuSumCalculator(props) {
     0
   );
 
-  //-------------------------- useEffects for immediate rerender  -------------------------------
-  //console.log for checking
-
-  // console.log("ikk bonus checked: " + ikkCheckbox);
-  // console.log("ikk bonus figure: " + ikkBonus);
-  // console.log("whitecollar. " + whiteCollar);
-  // console.log("end: " + (listPrice * sumInsured * collarFactor - ikkBonus));
-
+  
   //----- useEffect -----
   //input age and insured sum
   useEffect(() => {

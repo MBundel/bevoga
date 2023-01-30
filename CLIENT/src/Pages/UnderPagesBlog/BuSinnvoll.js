@@ -11,7 +11,7 @@ function BuOhneGesundheitsfragen() {
   return (
     <>
       <Helmet>
-        <title>Berufsunfähigkeitsversicherung trotz Psychotheraphie</title>
+        <title>Wann eine Berufsunfähigkeitsversicherung BU sinnvoll ist.</title>
         <meta
           name="description"
           content="Erfahre, ob eine Berufsunfähigkeitsversicherung sinnvoll für dich ist, Tag: 'Berufsunfähigkeitsversicherung sinnvoll'"

@@ -97,5 +97,19 @@
 
       <changefreq>weekly</changefreq>
    </url>
+   <url>
+      <loc>https://bevoga.de/grundfaehigkeistvers</loc>
+
+      <lastmod>2022-02-11</lastmod>
+
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://bevoga.de/BuRente</loc>
+
+      <lastmod>2022-02-11</lastmod>
+
+      <changefreq>weekly</changefreq>
+   </url>
 
 </urlset> 

@@ -7,7 +7,7 @@ function ProBevoga() {
   return (
     <>
       <Helmet>
-        <title>Wann ist bevoga die bessere Bu für dich ist</title>
+        <title>Grundfähigkeitsversicherung und eine kostengleiche bessere Alternative</title>
         <meta
           name="description"
           content=" bevoga, Gründe für die BU ohne Fragen zur Gesundheit"
